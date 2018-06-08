@@ -1,0 +1,1 @@
+# yonago_it
