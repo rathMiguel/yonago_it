@@ -1,0 +1,162 @@
+@charset "utf-8";
+
+// Mixins
+//
+// 各mixinの出力見本
+//
+// Styleguide 5.0.0
+
+
+// Text
+//
+// テキストのスタイルに関するmixinです。
+//
+// Styleguide 5.1.0
+
+// 要素からテキストを隠す
+//
+// 要素のテキストを隠します。主にスプライト画像の表示に使用します。
+// 
+// @include hide-text;
+//
+// markup:
+// <div class="mi-hide-text">
+//  <p>隠しテキストが入ります。</p>
+// </div>
+//
+// Styleguide 5.1.1
+
+@mixin hide-text{
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+// Grid
+//
+// グリッドのスタイルに関するmixinです。
+//
+// Styleguide 5.2.0
+
+// グリッドコンテンツの生成
+//
+// グリッドレイアウトを生成します。<br><br>
+// $content-width - カラムの幅<br>
+// $grid-number - カラム数<br>
+// $gap-y - カラムの余白幅<br>
+// $gap-x - カラムの下余白<br>
+//
+// **@include grid-content($content-width,$grid-number,$gap-y,$gap-x);**
+//
+// markup:
+// <div class="mi-grid-content"></div>
+// <div class="mi-grid-content"></div>
+// <div class="mi-grid-content"></div>
+// <div class="mi-grid-content"></div>
+//
+// Styleguide 5.2.1
+
+@mixin grid-content($content-width,$grid-number,$gap-y,$gap-x){
+  @include cf;
+  width: $content-width;
+  float: left;
+  margin-left: $gap-y;
+  margin-top: $gap-x;
+  margin-bottom: $gap-x;
+    &:first-child{
+      margin-left: 0;
+    }
+    &:nth-of-type(#{$grid-number}n+1){
+      margin-left: 0;
+      clear: both;
+    }
+}
+
+// Clearfix
+//
+// Clearfixを実現します。Compass用のClearfixとの違いは<br>
+// positionによって画像等をグリッド外にレイアウトしても表示の影響を受けないことです。
+//
+// **@include cf;**
+//
+// markup:
+// <div class="mi-cf"></div>
+//
+// Styleguide 5.2.2
+
+@mixin cf{
+  &:before,&:after {
+    content: "";
+    display: table;
+  }
+  &:after{
+    clear: both;
+  }
+}
+
+// Background
+//
+// 背景のスタイルに関するmixinです。
+//
+// Styleguide 5.3.0
+
+// リピート用背景の指定
+//
+// リピート用背景を指定します。<br><br>
+// $bg-name - 背景のパス<br>
+// $align:center - 背景の横基準位置<br>
+// $vertical:center - 背景の縦基準位置<br>
+//
+// **@include bg-repeat($bg-name,$align:center,$vertical:center);**
+//
+// markup:
+// <div class="mi-bg-repeat"></div>
+//
+// Styleguide 5.3.1
+
+@mixin bg-repeat($bg-name,$align:center,$vertical:center){
+  background: url('#{$bg-name}') $align $vertical;
+}
+
+// ワイド用背景の指定
+//
+// ワイド用背景を指定します。画面幅に合わせて背景が縮小/拡大されます。<br><br>
+// $bg-name - 背景のパス<br>
+// $align:center - 背景の横基準位置<br>
+// $vertical:center - 背景の縦基準位置<br>
+//
+// **@include bg-repeat($bg-name,$align:center,$vertical:center);**
+//
+// markup:
+// <div class="mi-bg-full"></div>
+//
+// Styleguide 5.3.2
+
+@mixin bg-full($bg-name,$align:center,$vertical:center){
+  background: url('#{$bg-name}') $align $vertical no-repeat;
+  background-size: cover;
+}
+
+// Media Query
+//
+// 設定したメディアクエリの出力をします。基本_settings.scssに設定した内容が反映されます。
+//
+// Styleguide 5.4.0
+
+@mixin media($media) {
+  @if not map-has-key($media-types, $media) {
+    @warn "#{$media}は登録されていないブレークポイントです。代わりにデスクトップ用のポイントを設定します";
+    $media: default;
+  }
+  @media #{map-get($media-types, $media)} {
+    @content;
+  }
+}
+
+//
+// width幅をパーセントに変換
+//
+
+@function grid($col,$row:$width-basic){
+  @return round(($col / $row) * 100%);
+}

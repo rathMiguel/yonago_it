@@ -1,0 +1,7 @@
+if common.useMinJs
+	script(src=label.depth + common.jsPath + "script.min.js")
+else
+	script(src=label.depth + common.jsPath + "vendor.js")
+	script(src=label.depth + common.jsPath + "script.js")
+if common.enableGoogleAnalytics
+	include _analytics

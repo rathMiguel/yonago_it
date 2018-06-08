@@ -1,0 +1,31 @@
+{
+  "name": "neue-component",
+  "description": "this component is builld up for Website",
+  "main": "gulpfile.js",
+  "authors": [
+    "kenji Hashimoto"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "neue"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "dev",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "reset-css": "^2.2.1"
+  },
+  "overrides": {
+    "reset-css": {
+      "main": "reset.css"
+    }
+  }
+}

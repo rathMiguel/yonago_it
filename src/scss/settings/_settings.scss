@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+//--------------------------------------------------------
+// 0. Basic
+//--------------------------------------------------------
+
+$base-font-size :14px;
+$base-font-color :#222;
+$base-line-height :1.6;
+$base-background :#FFF;
+
+$base-text-margin : 1.6em;
+
+//--------------------------------------------------------
+// 1. Colors
+//--------------------------------------------------------
+
+$color-primary :#FFA000;
+$color-secondary :#CDDC39;
+$color-minor :#4DD0E1;
+$color-error :#b71c1c;
+$color-gray :#CCC;
+$color-gray-dark :#BBB;
+$color-gray-light :#EFEFEF;
+
+$color-link :#283593;
+$color-link-hover :null;
+
+
+//--------------------------------------------------------
+// 2. Font Sizes
+//--------------------------------------------------------
+
+$fz-default :16px;
+$fz-small :11px;
+$fz-medium :22px;
+$fz-large :26px;
+$fz-xlarge :34px;
+$fz-xxlarge :44px;
+
+
+//--------------------------------------------------------
+// 3. Font types
+//--------------------------------------------------------
+
+$ja-go :'游ゴシック体','Yu Gothic',YuGothic,'ヒラギノ角ゴシック Pro','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,Osaka,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;
+$ja-min :'游明朝','YuMincho','Hiragino Mincho ProN','Hiragino Mincho Pro','ＭＳ 明朝',serif;
+$ja-maru :'ヒラギノ丸ゴ Pro W4','Hiragino maru Gothic Pro','HG丸ｺﾞｼｯｸM-PRO','Verdana','Osaka',sans-serif;
+
+
+//--------------------------------------------------------
+// 4. Media Types
+//--------------------------------------------------------
+
+$media-types: (
+  default: 'print, screen and (min-width: 961px)',
+  xs: 'only screen and (max-width: 480px)',
+  sm:  'only screen and (max-width: 767px)',
+  md:  'only screen and (min-width: 768px) and (max-width: 960px)',
+  lg:  'print, screen and (min-width: 961px)',
+  xl: 'print, screen and (min-width: 1260px)',
+  retina: 'screen and (-webkit-min-device-pixel-ratio: 2)',
+  print: 'print'
+);
+
+
+//--------------------------------------------------------
+// 5. Layout
+//--------------------------------------------------------
+$width-basic :1000px;
+$gutter :20px;
+$gutter-sm :12px;
+
+$columns :12;
+$style-media :sm, md, lg, xl;
+
+//--------------------------------------------------------
+// 7. Path
+//--------------------------------------------------------
+$path-common :'../images/common/';
+$path-top :'../images/top/';

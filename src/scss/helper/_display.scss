@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+.hide-all{display: none;}
+
+@each $class, $val in $media-types {
+	@if $class != default{
+		@include media($class){
+  		.hide-#{$class} {
+  		   display: none;
+  		}
+  	}
+  }
+}
+
+.inline-block{
+  display: inline-block;
+}
+
+.block{
+  display: block;
+}

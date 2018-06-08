@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+.table{
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  width: 100%;
+  th,td{
+    padding: 12px;
+    vertical-align: top;
+  }
+  th{
+    font-weight: 700;
+  }
+}
+
+.table-default{
+  th,td{
+    border: 1px solid #CCC;
+  }
+  th{
+    background-color: #EEE;
+  }
+}

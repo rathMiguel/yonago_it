@@ -1,0 +1,22 @@
+include mixin/_mixin
+block vars
+	- var label = top
+doctype
+html(lang=common.lang)
+	head
+		include head/_meta
+		include head/_favicon
+		include head/_twittercard
+		include head/_ogp
+		include head/_css
+		block title
+			title=label.title
+	body(id=label.id, class="page-" + label.id)
+		block header
+			include modules/_header
+		main(role="main")
+			block content
+				h1 Hello Extends
+		block footer
+			include modules/_footer
+		include js/_script

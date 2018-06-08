@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+/*
+---
+name: Button
+category: Module
+---
+
+ボタンのスタイル
+ 
+```jade
+.mgy-1: a.button ボタンの基本スタイル
+.mgy-1: a.button.button-small ボタン
+.mgy-1: a.button.button-medium ボタン
+.mgy-1: a.button.button-large ボタン
+.mgy-1: a.button.button-block ボタン
+.mgy-1: a.button.button-primary.button-medium ボタン
+
+```
+*/
+
+.button{
+	display: inline-block;
+	text-decoration: none;
+	padding: 10px 12px;
+	border: 1px solid transparent;
+	background: transparent;
+	cursor: pointer;
+	color: $base-font-color;
+	border: $base-font-color;
+	box-sizing: border-box;
+	background-color: $color-gray-light;
+	text-align: center;
+}
+
+.button-small{
+	padding: 8px 20px;
+	font-size: 0.9em;
+}
+
+.button-medium{
+	padding: 12px 40px;
+	min-width: 240px;
+}
+
+.button-large{
+	padding: 20px 12px;
+	font-size: 1.4em;
+	min-width: 340px;
+}
+
+.button-block{
+	display: block;
+	width: 100%;
+}
+
+.button-primary{
+	background-color: $color-primary;
+	border-color: $color-primary;
+	color: #FFF;
+	
+	&:hover{
+		background-color: lighten($color-primary, 5);
+		border-color: lighten($color-primary, 5);
+	}
+}

@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+/*
+---
+name: Main
+category: Layout
+---
+
+メインコンテンツのスタイル  
+コンテンツの幅はここで適用される
+ 
+```jade
+.wrapper
+  .rows
+    .cols.col-12(style="height: 3em; background-color: #EEE;") メイン枠のスタイル
+```
+*/
+
+.wrapper{
+  max-width: $width-basic + ($gutter * 2);
+  margin: auto;
+  padding-left: $gutter;
+  padding-right: $gutter;
+  box-sizing: border-box;
+}
+
+
+.rows{
+  @include cf;
+  margin-left: -$gutter;
+  margin-right: -$gutter;
+  position: relative;
+}

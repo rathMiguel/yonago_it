@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+.fl{float: left;}
+.fr{float: right;}
+.clear{clear: both;}
+
+@each $media in $style-media{
+  @include media($media){
+    .fl-#{$media} {float: left;}
+    .fr-#{$media} {float: right;}
+    .clear-#{$media} {clear: both;}
+  }
+}

@@ -1,0 +1,3 @@
+$ ->
+  # jQuery Scripts
+  return

@@ -1,0 +1,118 @@
+#===============================
+# 基本設定
+#===============================
+# タイトル、URLなど
+general:
+  title:       &title 'I＋[イット] 公式ウェブサイト - 鳥取県米子市周辺の地域情報'
+  description: &description 'I+は、鳥取県米子市エリアを中心としたフリーペーパーです。「アナログとデジタルの新しいカタチ」をコンセプトに情報発信しています。'
+  user:        &user '米子コンテンツ工場'
+  url:         &url 'https://it-magazine.info/'
+  version:     &version 1.0
+
+# ファイルパス
+path:
+  input:       './src/'
+  dev:         './dev/'
+  output:      './public/'
+  css:         &cssPath 'css/'
+  js:          &jsPath 'js/'
+  fonts:       'fonts/'
+  stage:       './www/'
+  styleguide:  './styleguide/'
+  proxy:       'http://it.test/'
+  wpTheme:     'yonago-it/'
+
+# 画像のパス
+image:
+  main:    'view/'
+  favicon: 'logo.fw.png'
+  sprite:  'sprite/'
+  ogp:     'ogp/'
+  fonts:   'fonts/'
+
+# プレフィックス付与対象のブラウザ
+prefix:
+  - 'ie >= 10'
+  - 'ie_mob >= 10'
+  - 'ff >= 30'
+  - 'chrome >= 34'
+  - 'safari >= 7'
+  - 'opera >= 23'
+  - 'ios >= 7'
+  - 'android >= 4.4'
+  - 'bb >= 10'
+
+#===============================
+# サイトの設定
+#===============================
+# 一般設定
+common: 
+  siteName:              *title
+  siteUrl:               *url
+  encode:                'UTF-8'
+  lang:                  'ja'
+  cssPath:               *cssPath
+  jsPath:                *jsPath
+  useMinJs:              false
+  useMinCss:             false
+  viewportContent:       'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes'
+  formatDetection:       true
+  ogp:                   true
+  ogType:                'website'
+  ogImage:               'images/common/ogp.jpg'
+  twitterCard:           false
+  twitterUser:           ''
+  enableGoogleAnalytics: false
+  trackingCode:          'UA-XXXXX-X'
+
+# トップページ
+top: 
+  id:          'top'
+  title:       'I＋[イット] 公式ウェブサイト - 鳥取県米子市周辺の地域情報'
+  depth:       ''
+  dirName:     ''
+  description: *description
+  keywords:    'キーワードが入ります'
+  cannonical:  null
+  alternate:   null
+
+# 下層ページ（以降、pageは各ページに適宜つける）
+page: 
+  id:          'page'
+  title:       'トップページタイトル名'
+  depth:       ''
+  dirName:     ''
+  description: 'サイト説明が入ります'
+  keywords:    'キーワードが入ります'
+  cannonical:  null
+  alternate:   null
+
+#===============================
+# ファビコンの設定
+#===============================
+favicon:
+  enable:         false
+  appName:        *title
+  appDescription: *description
+  developerName:  *user
+  developerURL:   'https://it-magazine.info/'
+  background:     '#FFF'
+  path:           'favicons/'
+  url:            *url
+  display:        'standalone'
+  orientation:    'portrait'
+  icons:
+    android:      true
+    appleIcon:    true
+    appleStartup: false
+    coast:        false
+    favicons:     true
+    firefox:      true
+    opengraph:    false
+    twitter:      false
+    windows:      true
+    yandex:       false
+  version:        *version
+  logging:        false
+  online:         false
+  replace:        false

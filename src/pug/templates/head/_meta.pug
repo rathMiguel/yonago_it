@@ -1,0 +1,11 @@
+meta(charset=common.encode)
+meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+if label.description
+	meta(name='description', content=label.description)
+if label.keywords
+	meta(name='keywords', content=label.keywords)
+if common.formatDetection
+	meta(name="format-detection" content="telephone=no,address=no,email=no")
+meta(name="viewport" content=common.viewportContent)
+if label.cannonical
+	link(rel="canonical" href!=label.cannonical)

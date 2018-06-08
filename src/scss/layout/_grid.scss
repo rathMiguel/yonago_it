@@ -1,0 +1,119 @@
+@charset "utf-8";
+
+/*
+---
+name: Grid
+category: Layout
+---
+
+グリッドレイアウト用のスタイル
+
+- col-x - 通常のグリッド
+- col-x-{メディアの接頭辞} - そのメディアタイプのみに適用するグリッド
+ 
+```jade
+.wrapper
+  .rows(style="margin: 0.5em 0;")
+    .cols.col-12: .sg-panel(style="background-color: #EEE; padding: 10px; font-size: 10px") .col-12
+  .rows(style="margin: 0.5em 0;")
+    .cols.col-11: .sg-panel(style="background-color: #EEE; padding: 10px; font-size: 10px") .col-11
+    .cols.col-1: .sg-panel(style="background-color: #EEE; padding: 10px; font-size: 10px") .col-1
+  .rows(style="margin: 0.5em 0;")
+    .cols.col-10: .sg-panel(style="background-color: #EEE; padding: 10px; font-size: 10px") .col-10
+    .cols.col-2: .sg-panel(style="background-color: #EEE; padding: 10px; font-size: 10px") .col-2
+  .rows(style="margin: 0.5em 0;")
+    .cols.col-9: .sg-panel(style="background-color: #EEE; padding: 10px; font-size: 10px") .col-9
+    .cols.col-3: .sg-panel(style="background-color: #EEE; padding: 10px; font-size: 10px") .col-3
+  .rows(style="margin: 0.5em 0;")
+    .cols.col-8: .sg-panel(style="background-color: #EEE; padding: 10px; font-size: 10px") .col-8
+    .cols.col-4: .sg-panel(style="background-color: #EEE; padding: 10px; font-size: 10px") .col-4
+  .rows(style="margin: 0.5em 0;")
+    .cols.col-7: .sg-panel(style="background-color: #EEE; padding: 10px; font-size: 10px") .col-7
+    .cols.col-5: .sg-panel(style="background-color: #EEE; padding: 10px; font-size: 10px") .col-5
+  .rows(style="margin: 0.5em 0;")
+    .cols.col-6: .sg-panel(style="background-color: #EEE; padding: 10px; font-size: 10px") .col-6
+    .cols.col-6: .sg-panel(style="background-color: #EEE; padding: 10px; font-size: 10px") .col-6
+```
+*/
+
+.cols{
+  padding-left: $gutter;
+  padding-right: $gutter;
+  position: relative;
+  float: left;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+@for $i from 1 through $columns {
+  .col-#{$i} {
+      width: ($i / $columns) * 100%;
+  }
+}
+
+@each $media in $style-media{
+  @include media($media){
+    @for $i from 1 through $columns {
+      .col-#{$i}-#{$media} {
+          width: ($i / $columns) * 100%;
+      }
+    }
+  }
+}
+
+/*
+---
+name: Offset
+category: Layout
+---
+
+グリッドレイアウトのオフセット
+
+- offset-x - 通常のグリッド
+- offset-x-{メディアの接頭辞} - そのメディアタイプのみに適用するオフセット
+ 
+```jade
+.wrapper
+  .rows(style="margin: 0.5em 0;")
+    .cols.col-12: .sg-panel(style="background-color: #EEE; padding: 10px; font-size: 10px") .col-12
+  .rows(style="margin: 0.5em 0;")
+    .cols.col-11.offset-1: .sg-panel(style="background-color: #EEE; padding: 10px; font-size: 10px") .col-11
+  .rows(style="margin: 0.5em 0;")
+    .cols.col-10.offset-2: .sg-panel(style="background-color: #EEE; padding: 10px; font-size: 10px") .col-10
+  .rows(style="margin: 0.5em 0;")
+    .cols.col-9.offset-3: .sg-panel(style="background-color: #EEE; padding: 10px; font-size: 10px") .col-9
+  .rows(style="margin: 0.5em 0;")
+    .cols.col-8.offset-4: .sg-panel(style="background-color: #EEE; padding: 10px; font-size: 10px") .col-8
+  .rows(style="margin: 0.5em 0;")
+    .cols.col-7.offset-5: .sg-panel(style="background-color: #EEE; padding: 10px; font-size: 10px") .col-7
+  .rows(style="margin: 0.5em 0;")
+    .cols.col-6.offset-6: .sg-panel(style="background-color: #EEE; padding: 10px; font-size: 10px") .col-6
+  .rows(style="margin: 0.5em 0;")
+    .cols.col-5.offset-7: .sg-panel(style="background-color: #EEE; padding: 10px; font-size: 10px") .col-6
+  .rows(style="margin: 0.5em 0;")
+    .cols.col-4.offset-8: .sg-panel(style="background-color: #EEE; padding: 10px; font-size: 10px") .col-6
+  .rows(style="margin: 0.5em 0;")
+    .cols.col-3.offset-9: .sg-panel(style="background-color: #EEE; padding: 10px; font-size: 10px") .col-6
+  .rows(style="margin: 0.5em 0;")
+    .cols.col-2.offset-10: .sg-panel(style="background-color: #EEE; padding: 10px; font-size: 10px") .col-6
+  .rows(style="margin: 0.5em 0;")
+    .cols.col-1.offset-11: .sg-panel(style="background-color: #EEE; padding: 10px; font-size: 10px") .col-6
+```
+*/
+
+
+@for $i from 1 through $columns - 1 {
+  .offset-#{$i} {
+    left: ($i / $columns) * 100%;
+  }
+}
+
+@each $media in $style-media{
+  @include media($media){
+    @for $i from 1 through $columns - 1 {
+      .offset-#{$i}-#{$media} {
+        left: ($i / $columns) * 100%;
+      }
+    }
+  }
+}
