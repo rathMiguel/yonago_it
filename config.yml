@@ -91,7 +91,7 @@ page:
 # ファビコンの設定
 #===============================
 favicon:
-  enable:         false
+  enable:         true
   appName:        *title
   appDescription: *description
   developerName:  *user

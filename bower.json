@@ -21,11 +21,21 @@
   ],
   "dependencies": {
     "jquery": "^3.1.1",
-    "reset-css": "^2.2.1"
+    "reset-css": "^2.2.1",
+    "font-awesome": "^5.0.13"
   },
   "overrides": {
     "reset-css": {
       "main": "reset.css"
+    },
+    "font-awesome": {
+      "main": [
+        "web-fonts-with-css/scss/fa-brands.scss",
+        "web-fonts-with-css/scss/fa-regular.scss",
+        "web-fonts-with-css/scss/fa-solid.scss",
+        "web-fonts-with-css/scss/fontawesome.scss",
+        "web-fonts-with-css/webfonts/**/*"
+      ]
     }
   }
 }
