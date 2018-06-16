@@ -14,3 +14,13 @@
 
 .small{ font-size: 0.8em; }
 .bold{ font-weight: 700; }
+
+//
+// captions
+//
+
+.caption-block-top{
+  @include media(mdu){
+    font-size: 18px;
+  }
+}

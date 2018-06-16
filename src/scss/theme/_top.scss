@@ -1,0 +1,252 @@
+@charset "utf-8";
+
+.slider-top{
+  overflow: hidden;
+  .slick-arrow{
+    background-color: rgba(#FFF, 0.2);
+    width: 1200px;
+    height: 700px * 2;
+    margin-top: 0;
+    margin-bottom: 0;
+    z-index: 100;
+    top: 0;
+    
+    &:before{
+      position: absolute;
+      bottom: 23.5%;
+      font-size: 40px;
+      color: #222;
+    }
+    &.slick-prev{
+      left: 50%;
+      margin-left: (1200px * -1.5);
+      &:before{
+        right: 20px;
+        @extend .fa;
+        @extend .fa-arrow-alt-circle-left;
+      }
+    }
+    &.slick-next{
+      right: 50%;
+      margin-right: (1200px * -1.5);
+      position: absolute;
+      &:before{
+        left: 20px;
+        @extend .fa;
+        @extend .fa-arrow-alt-circle-right;
+      }
+    }
+  }
+
+  .slick-dotted.slick-slider{
+    margin-bottom: 0;
+  }
+
+  .slick-dots{
+    z-index: 200;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    margin-bottom: -30px;
+    @include media(mdu){
+      position: relative;
+    }
+    @include media(md) {
+      padding-right: 30px;
+    }
+    @include media(lg) {
+      padding-right: 100px;
+      bottom: 40px;
+    }
+    @include media(sm) {
+      bottom: 60px;
+      padding-left: 0;
+      padding-right: 0;
+      display: none !important;
+    }
+    li{
+      margin-left: 10px;
+      margin-right: 10px;
+      width: auto;
+      height: auto;
+    }
+
+    button{
+      height: auto;
+      width: auto;
+      background-color: rgba(#fff, 0.75);
+      text-indent: -9999px;
+      border-radius: 50px;
+    }
+    
+    .slick-active{
+      button{
+        background-color: rgba(#666, 1);
+      }
+    }
+  }
+}
+
+//
+// shop list
+//
+
+.block-shop-list{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.area-shoplist-main{
+  overflow: hidden;
+}
+
+.block-shop-list{
+  max-width: (260px + 20px) * 6;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.item-block-shop{
+  color: $base-font-color;
+  text-decoration: none;
+  max-width: 260px;
+  display: block;
+  margin-left: 10px;
+  margin-right: 10px;
+  
+  .block-shop-photo{
+    margin-bottom: 5px;
+    position: relative;
+  }
+
+  .block-shop-cat{
+    position: absolute;
+    right: 0;
+    display: inline-block;
+    background-color: #FF7573;
+    color: #FFF;
+    padding: 3px 10px;
+  }
+  
+  .title-shop-name{
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+  
+  .list-shop-tags{
+    li{
+      display: inline-block;
+      margin-right: 1em;
+      
+      .fa{
+        margin-right: 0.3em;
+      }
+    }
+  }
+}
+
+//
+// top feature
+//
+
+.block-feature-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+  img{
+    vertical-align: bottom;
+  }
+}
+
+.item-block-feature{
+  margin: 5px;
+  display: block;
+}
+
+.block-feature-photo{
+  width: 260px;
+}
+
+//
+// news / facebook
+//
+
+.wrap-news{
+  display: flex;
+  flex-direction: column;
+  @include media(lg){
+    flex-direction: row;
+  }
+}
+
+.block-news{
+  width: 100%;
+  background-color: #F6F6F6;
+  .block-divider{
+    float: right;
+    box-sizing: border-box;
+    max-width: 600px;
+    padding: 15px;
+    @include media(sm){
+      padding: 25px;
+    }
+    @include media(lg){
+      padding: 35px;
+    }
+  }
+}
+
+.block-facebook{
+  @extend .block-news;
+  background-color: #E6E6E6;
+  .block-divider{
+    float: left;
+  }
+}
+
+.text-date{
+  color: #999;
+  display: inline-block;
+  margin-bottom: 3px;
+}
+
+.block-news-footer{
+  text-align: right;
+}
+
+.item-block-news{
+  overflow: hidden;
+  border-bottom: 1px dashed #CCC;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  .block-news-photo{
+    float: left;
+  }
+
+  .block-news-content{
+    padding-left: 150px;
+    
+    .news-excerpt{
+      margin-bottom: 0;
+    }
+  }
+}
+
+.block-news-footer{
+  margin-top: 20px;
+}
+
+.title-secondary{
+  border-left: 4px solid $color-primary;
+  padding-left: 10px;
+  @include media(mdu){
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+}
+
+.block-facebook-footer{
+  margin-top: 20px;
+}

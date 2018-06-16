@@ -1,7 +1,132 @@
 extends /templates/_layout
 block vars
-	- var label = top
+  - var label = top;
 block content
-	.wrapper
-		.rows
-			.cols.col-12
+  .block-common.block-top.block-slider
+    ul.js-slider-top.slider-top
+      li: a(href=""): img(src="https://placehold.jp/1200x700.png", alt="")
+      li: a(href=""): img(src="https://placehold.jp/1200x700.png", alt="")
+      li: a(href=""): img(src="https://placehold.jp/1200x700.png", alt="")
+      li: a(href=""): img(src="https://placehold.jp/1200x700.png", alt="")
+      li: a(href=""): img(src="https://placehold.jp/1200x700.png", alt="")
+      li: a(href=""): img(src="https://placehold.jp/1200x700.png", alt="")
+  .block-common.block-top
+    .wrapper
+      .rows
+        .cols.col-12
+          .block-header
+            h2.title.title-block-header 掲載店舗情報
+            span.title-block-header-sub STORES
+      .rows
+        .cols.col-12.text-center
+          p.caption-block-top 旬なお店をピックアップ！
+    .area-shoplist-main
+      .block-shop-list
+        // ループ:店舗リスト
+        - var i = 1;
+        while i <= 6
+          a(href="single.html").item-block.item-block-shop
+            .block-shop-photo
+              img(src="https://placehold.jp/260x170.png", alt="")
+              span.block-shop-cat.ca-yasugi  安来市
+            .block-shop-photo
+              h3.title.title-shop-name 道の駅　あらエッサ
+              ul.list-shop-tags
+                li
+                  span.fa.fa-tag
+                  |遊ぶ
+                li
+                  span.fa.fa-tag
+                  |食べる
+                li
+                  span.fa.fa-tag
+                  |体験する
+          - i++;
+        // /ループ:店舗リスト
+      .block-footer
+        a(href="archive-shop.html").button.button-rounded.button-medium.button-primary もっと見る
+  .block-common.block-top
+    .wrapper
+      .rows
+        .cols.col-12
+          .block-header
+            h2.title.title-block-header スペシャル特集
+            span.title-block-header-sub SPECIAL FEATURE
+      .rows
+        .cols.col-12.text-center
+          p.caption-block-top イット編集部が厳選したとっておきのイベントを特集しました
+      .rows
+        .cols.col-12
+          .block-feature-list
+            // ループ:スペシャル特集
+            - var i = 1;
+            while i <= 6
+              a(href="single.html").item-block.item-block-feature
+                .block-feature-photo
+                  img(src="https://placehold.jp/260x170.png", alt="")
+              - i++;
+            // /ループ:スペシャル特集
+  .block-common.block-top
+    .wrapper
+      .rows
+        .cols.col-12
+          .block-header
+            h2.title.title-block-header 新着情報
+            span.title-block-header-sub NEWS
+    .wrap-news
+      .block-news
+        .block-divider
+          .block-news-header
+            h3.title.title-secondary NEWS &amp; BLOG
+          .block-news-list.js-height
+            // ループ:ニュース
+            - var i = 1;
+            while i <= 3
+              .item-block.item-block-news
+                .block-news-photo
+                  img(src="https://placehold.jp/140x140.png", alt="")
+                .block-news-content
+                  .block-news-meta
+                    span.text-date 2018.6.15
+                    h3.title.title-news メガネルームeyeさんに潜入取材に行ってきました！
+                    p.news-excerpt テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが
+                  .block-news-footer
+                    a(href="").link.link-primary 続きを読む
+              - i++;
+            // /ループ:ニュース
+          .block-news-footer
+            a(href="").button.button-rounded.button-medium.button-primary もっと見る
+      .block-facebook
+        .block-divider
+          .block-facebook-header
+            h3.title.title-secondary FACEBOOK
+          .block-facebook-main.js-height
+            p.color-gray 旬な情報を定期的に発信中！
+            iframe(src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffp.It.YCF%2F&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=362851420751625" width="500" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media")
+          .block-facebook-footer
+            a(href="https://www.facebook.com/fp.It.YCF/" target="_blank").button.button-rounded.button-medium.button-fblue FACEBOOKページへ
+  .block-common.block-top
+    .wrapper
+      .rows
+        .cols.col-12
+          .block-header
+            h2.title.title-block-header フォトギャラリー
+            span.title-block-header-sub PHOTO GALLERY
+      .rows
+        .cols.col-12
+          .block-gallery
+            ul.list-gallery
+              li: a(href=""): img(src="https://placehold.jp/260x260.png", alt="")
+              li: a(href=""): img(src="https://placehold.jp/260x260.png", alt="")
+              li: a(href=""): img(src="https://placehold.jp/260x260.png", alt="")
+              li: a(href=""): img(src="https://placehold.jp/260x260.png", alt="")
+              li: a(href=""): img(src="https://placehold.jp/260x260.png", alt="")
+              li: a(href=""): img(src="https://placehold.jp/260x260.png", alt="")
+              li: a(href=""): img(src="https://placehold.jp/260x260.png", alt="")
+              li: a(href=""): img(src="https://placehold.jp/260x260.png", alt="")
+              li: a(href=""): img(src="https://placehold.jp/260x260.png", alt="")
+              li: a(href=""): img(src="https://placehold.jp/260x260.png", alt="")
+              li: a(href=""): img(src="https://placehold.jp/260x260.png", alt="")
+              li: a(href=""): img(src="https://placehold.jp/260x260.png", alt="")
+      .block-footer
+        a(href="archive-shop.html").button.button-rounded.button-medium.button-igpurple もっと見る（Instagramページへ）

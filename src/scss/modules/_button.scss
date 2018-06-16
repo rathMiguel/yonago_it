@@ -39,8 +39,8 @@ category: Module
 }
 
 .button-medium{
-	padding: 12px 40px;
-	min-width: 240px;
+	padding: 12px 20px;
+	min-width: 260px;
 }
 
 .button-large{
@@ -62,5 +62,27 @@ category: Module
 	&:hover{
 		background-color: lighten($color-primary, 5);
 		border-color: lighten($color-primary, 5);
+	}
+}
+
+.button-fblue{
+	background-color: #3A4EFF;
+	border-color: #3A4EFF;
+	color: #FFF;
+	
+	&:hover{
+		background-color: lighten(#3A4EFF, 5);
+		border-color: lighten(#3A4EFF, 5);
+	}
+}
+
+.button-igpurple{
+	background-color: #D23AFF;
+	border-color: #D23AFF;
+	color: #FFF;
+	
+	&:hover{
+		background-color: lighten(#D23AFF, 5);
+		border-color: lighten(#D23AFF, 5);
 	}
 }

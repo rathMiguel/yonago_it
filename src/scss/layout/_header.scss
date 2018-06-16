@@ -14,5 +14,70 @@ header#header
 */
 
 header#header{
-	
+	@include media(mdu){
+    
+  }
+
+  .header-logo{
+    @include media(mdu){
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 15px;
+    }
+  }
+
+  .header-caption{
+    @include media(mdu){
+      text-align: center;
+      font-size: 16px;
+      font-family: $ja_min;
+    }
+  }
+}
+
+.header-nav{
+  @include media(mdu){
+    border-top: 1px solid #707070;
+    border-bottom: 1px solid #707070;
+  }
+
+  a{
+    color: $base-font-color;
+    text-decoration: none;
+    
+  }
+
+  .list-global{
+    @include media(mdu){
+      text-align: center;
+      font-size: 17px;
+      font-weight: 700;
+    }
+    li{
+      @include media(mdu){
+        display: inline-block;
+        &:not(:first-child) :before{
+          content: "/";
+          display: inline-block;
+          margin-right: 1.25em;
+          margin-left: -1.25em;
+        }
+      }
+
+      a{
+        transition: all 0.2s ease;
+        @include media(mdu){
+          display: inline-block;
+          padding: 12px 1.25em;
+        }
+
+        &:hover{
+          color: $color-primary;
+          &:before{
+            color: $base-font-color;
+          }
+        }
+      }
+    }
+  }
 }

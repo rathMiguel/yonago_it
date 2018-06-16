@@ -14,5 +14,114 @@ footer#footer
 */
 
 footer#footer{
+  background-color: #232630;
+  color: #E1E5E9;
+  margin-top: 40px;
+  @include media(md){
+    margin-top: 60px;
+  }
+  @include media(lg){
+    margin-top: 100px;
+  }
   
+  a{
+    color: #E1E5E9;
+  }
+
+  .nav-footer-sub{
+    background-color: #E2E2E2;
+    color: #222;
+    overflow: hidden;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    
+    a{
+      color: #222;
+    }
+
+    .list-footer-nav-sub{
+      float: right;
+      li{
+        display: inline-block;
+        margin-left: 2em;
+      }
+    }
+  }
+
+  .footer-about{
+    display: flex;
+    align-items: center;
+    
+    .footer-about-logo{
+      display: flex;
+      align-items: flex-end;
+    }
+    
+    .logo-footer{
+      display: inline-block;
+      vertical-align: bottom;
+      img{
+        max-width: none;
+      }
+    }
+    .logo-footer-caption{
+      display: inline-block;
+      vertical-align: bottom;
+      white-space: nowrap;
+      font-size: 18px;
+      margin-left: 15px;
+    }
+  }
+
+  .footer-about-content{
+    padding-left: 20px;
+    margin-left: 20px;
+    border-left: 2px solid #707070;
+  }
+
+  .footer-main{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    @include media(mdu){
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .footer-about-bottom{
+    text-align: right;
+    color: #FFF;
+    
+    a{
+      color: $color-primary;
+    }
+  }
+
+  .footer-bottom{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    border-top: 1px solid #707070;
+    
+    p{
+      margin-bottom: 0;
+    }
+  }
+
+  .list-footer-main{
+    margin-top: -10px;
+    margin-bottom: 10px;
+    li{
+      display: inline-block;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      margin-right: 1.5em;
+      @extend .fa;
+      @extend .fa-chevron-circle-right;
+      &:before{
+        color: $color-primary;
+        margin-right: 0.5em;
+      }
+    }
+  }
 }

@@ -15,7 +15,7 @@ $base-text-margin : 1.6em;
 // 1. Colors
 //--------------------------------------------------------
 
-$color-primary :#FFA000;
+$color-primary :#FFC43A;
 $color-secondary :#CDDC39;
 $color-minor :#4DD0E1;
 $color-error :#b71c1c;
@@ -57,6 +57,7 @@ $media-types: (
   xs: 'only screen and (max-width: 480px)',
   sm:  'only screen and (max-width: 767px)',
   md:  'only screen and (min-width: 768px) and (max-width: 960px)',
+  mdu:  'only screen and (min-width: 768px)',
   lg:  'print, screen and (min-width: 961px)',
   xl: 'print, screen and (min-width: 1260px)',
   retina: 'screen and (-webkit-min-device-pixel-ratio: 2)',
@@ -67,7 +68,7 @@ $media-types: (
 //--------------------------------------------------------
 // 5. Layout
 //--------------------------------------------------------
-$width-basic :1000px;
+$width-basic :1240px;
 $gutter :20px;
 $gutter-sm :12px;
 
