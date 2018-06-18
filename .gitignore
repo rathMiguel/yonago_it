@@ -1,6 +1,14 @@
 .sass-cache/
+.vagrant/
 node_modules/
 bower_components/
+wordpress/
+public/
+themes/yonago-it2/fonts/
+themes/yonago-it2/images/
+themes/yonago-it2/css/
+themes/yonago-it2/js/
+wp-cli/
 styleguide/
 Thumbs.db
 .DS_Store

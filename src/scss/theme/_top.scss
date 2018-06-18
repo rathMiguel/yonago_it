@@ -51,11 +51,7 @@
     @include media(mdu){
       position: relative;
     }
-    @include media(md) {
-      padding-right: 30px;
-    }
     @include media(lg) {
-      padding-right: 100px;
       bottom: 40px;
     }
     @include media(sm) {

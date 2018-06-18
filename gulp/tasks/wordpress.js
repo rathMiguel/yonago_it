@@ -7,7 +7,9 @@ const changed = require('gulp-changed');
 const browserSync = require('browser-sync').create();
 
 gulp.task('copy:wptheme', () => {
-  return gulp.src([`${config.path.output}**/*`, `!${config.path.output}**/*.html`], {base: config.path.output})
+  return gulp.src([`${config.path.output}**/*`,
+    `!${config.path.output}**/*.html`],
+    {base: config.path.output})
   .pipe(changed(`./themes/${config.path.wpTheme}`))
   .pipe(gulp.dest(`./themes/${config.path.wpTheme}`));
 });
@@ -18,7 +20,7 @@ gulp.task('copy:wpstage', () => {
   .pipe(gulp.dest(`${config.path.stage}wordpress/wp-content/themes/`));
 });
 
-gulp.task('wp', () => {
+gulp.task('wp', ['copy:wptheme', 'copy:wptheme'], () => {
   let timer;
 
   browserSync.init({

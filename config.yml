@@ -17,10 +17,10 @@ path:
   css:         &cssPath 'css/'
   js:          &jsPath 'js/'
   fonts:       'fonts/'
-  stage:       './www/'
+  stage:       './'
   styleguide:  './styleguide/'
   proxy:       'http://it.test/'
-  wpTheme:     'yonago-it/'
+  wpTheme:     'yonago-it2/'
 
 # 画像のパス
 image:
@@ -72,20 +72,61 @@ top:
   depth:       ''
   dirName:     ''
   description: *description
-  keywords:    'キーワードが入ります'
+  keywords:    ''
   cannonical:  null
   alternate:   null
 
 # 下層ページ（以降、pageは各ページに適宜つける）
 page: 
   id:          'page'
+  title:       'I＋[イット] 公式ウェブサイト - 固定ページ'
+  depth:       ''
+  dirName:     ''
+  description: ''
+  keywords:    ''
+  cannonical:  null
+  alternate:   null
+
+shop: 
+  id:          'page'
   title:       'トップページタイトル名'
   depth:       ''
   dirName:     ''
-  description: 'サイト説明が入ります'
-  keywords:    'キーワードが入ります'
+  description: ''
+  keywords:    ''
   cannonical:  null
   alternate:   null
+
+shopSingle: 
+  id:          'page'
+  title:       'トップページタイトル名'
+  depth:       ''
+  dirName:     ''
+  description: ''
+  keywords:    ''
+  cannonical:  null
+  alternate:   null
+
+single: 
+  id:          'page'
+  title:       'トップページタイトル名'
+  depth:       ''
+  dirName:     ''
+  description: ''
+  keywords:    ''
+  cannonical:  null
+  alternate:   null
+
+news: 
+  id:          'page'
+  title:       'トップページタイトル名'
+  depth:       ''
+  dirName:     ''
+  description: ''
+  keywords:    ''
+  cannonical:  null
+  alternate:   null
+
 
 #===============================
 # ファビコンの設定

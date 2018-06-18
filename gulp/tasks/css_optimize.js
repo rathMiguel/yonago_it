@@ -5,7 +5,7 @@ const config = require('../config').config;
 
 const pleeease = require('gulp-pleeease');
 
-gulp.task('css:optimize', () => {
+gulp.task('css:optimize', ['sass'], () => {
     return gulp.src(`${config.path.dev + config.path.css}*.css`)
     .pipe(pleeease({
       minifier: false,
