@@ -28,4 +28,8 @@ $ ->
     ]
 
   $('.js-height').matchHeight()
+
+  $('.nav-bars').on 'click', ->
+    $('body').toggleClass('is-navopen')
+    $(this).next().slideToggle()
   return

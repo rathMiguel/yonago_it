@@ -10,9 +10,21 @@
 .title-block-header{
   font-size: 28px;
   margin-bottom: 5px;
+  @include media(sm){
+    font-size: 20px;
+  }
 }
 
 .title-block-header-sub{
   color: #707070;
   font-size: 16px;
+  @include media(sm){
+    font-size: 13px;
+  }
+}
+
+.title-news{
+  @include media(sm){
+    font-size: 16px;
+  }
 }

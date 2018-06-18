@@ -25,6 +25,9 @@ body {
   background: $base-background;
   text-size-adjust: 100%;
   font-weight: 500;
+  @include media(sm){
+    padding-top: 64px;
+  }
 }
 
 a{

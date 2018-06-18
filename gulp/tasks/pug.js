@@ -14,7 +14,7 @@ const cache = require('gulp-cached');
 
 gulp.task('pug', () => {
   return gulp.src([`${config.path.input}pug/**/*.pug`,`!${config.path.input}pug/**/_*.pug`])
-    .pipe(cache('jaded'))
+    // .pipe(cache('jaded'))
     .pipe(plumber({errorHandler: notify.onError('<%= error.message %>')}))
     .pipe(data((file) => {
       return config;

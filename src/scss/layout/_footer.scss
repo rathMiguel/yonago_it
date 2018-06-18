@@ -34,6 +34,9 @@ footer#footer{
     overflow: hidden;
     padding-top: 14px;
     padding-bottom: 14px;
+    @include media(sm){
+      display: none;
+    }
     
     a{
       color: #222;
@@ -48,13 +51,25 @@ footer#footer{
     }
   }
 
+  .footer-main{
+    @include media(sm){
+      padding-top: 20px;
+    }
+  }
+
   .footer-about{
     display: flex;
     align-items: center;
+    @include media(sm){
+      flex-direction: column;
+    }
     
     .footer-about-logo{
       display: flex;
       align-items: flex-end;
+      @include media(sm){
+        margin-bottom: 10px;
+      }
     }
     
     .logo-footer{
@@ -62,8 +77,12 @@ footer#footer{
       vertical-align: bottom;
       img{
         max-width: none;
+        @include media(sm){
+          width: 50px;
+        }
       }
     }
+
     .logo-footer-caption{
       display: inline-block;
       vertical-align: bottom;
@@ -74,9 +93,11 @@ footer#footer{
   }
 
   .footer-about-content{
-    padding-left: 20px;
-    margin-left: 20px;
-    border-left: 2px solid #707070;
+    @include media(mdu){
+      padding-left: 20px;
+      margin-left: 20px;
+      border-left: 2px solid #707070;
+    }
   }
 
   .footer-main{
@@ -101,26 +122,66 @@ footer#footer{
     padding-top: 10px;
     padding-bottom: 10px;
     text-align: center;
-    border-top: 1px solid #707070;
+    @include media(mdu){
+      border-top: 1px solid #707070;
+    }
+    @include media(sm){
+      margin-top: -15px;
+    }
     
     p{
       margin-bottom: 0;
     }
   }
 
+
   .list-footer-main{
-    margin-top: -10px;
-    margin-bottom: 10px;
+    @include media(mdu){
+      margin-top: -10px;
+      margin-bottom: 10px;
+    }
     li{
-      display: inline-block;
-      margin-top: 15px;
-      margin-bottom: 15px;
-      margin-right: 1.5em;
       @extend .fa;
       @extend .fa-chevron-circle-right;
+      @include media(sm){
+        display: block;
+        margin-bottom: 1px;
+        &:before{
+          content: none;
+        }
+      }
+      @include media(mdu){
+        display: inline-block;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        margin-right: 1.5em;
+      }
       &:before{
         color: $color-primary;
         margin-right: 0.5em;
+      }
+
+      a{
+        @extend .fa;
+        @extend .fa-angle-right;
+        position: relative;
+        @include media(sm){
+          display: block;
+          padding: 15px 12px;
+          text-decoration: none;
+          background-color: lighten(#232630, 10);
+        }
+        &:before{
+          @include media(sm){
+            position: absolute;
+            right: 12px;
+          }
+        }
+        @include media(mdu){
+          &:before{
+            content: none;
+          }
+        }
       }
     }
   }

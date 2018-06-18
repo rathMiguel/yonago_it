@@ -29,7 +29,7 @@ block content
             .block-shop-photo
               img(src="https://placehold.jp/260x170.png", alt="")
               span.block-shop-cat.ca-yasugi  安来市
-            .block-shop-photo
+            .block-shop-content
               h3.title.title-shop-name 道の駅　あらエッサ
               ul.list-shop-tags
                 li
@@ -41,6 +41,8 @@ block content
                 li
                   span.fa.fa-tag
                   |体験する
+              .block-shop-footer
+                span.text-primary 詳しく見る
           - i++;
         // /ループ:店舗リスト
       .block-footer
@@ -56,7 +58,7 @@ block content
         .cols.col-12.text-center
           p.caption-block-top イット編集部が厳選したとっておきのイベントを特集しました
       .rows
-        .cols.col-12
+        .cols.col-12.pdx-0-sm
           .block-feature-list
             // ループ:スペシャル特集
             - var i = 1;
@@ -82,7 +84,7 @@ block content
             // ループ:ニュース
             - var i = 1;
             while i <= 3
-              .item-block.item-block-news
+              a(href="").item-block.item-block-news
                 .block-news-photo
                   img(src="https://placehold.jp/140x140.png", alt="")
                 .block-news-content
@@ -91,7 +93,7 @@ block content
                     h3.title.title-news メガネルームeyeさんに潜入取材に行ってきました！
                     p.news-excerpt テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが
                   .block-news-footer
-                    a(href="").link.link-primary 続きを読む
+                    span.link.link-primary 続きを読む
               - i++;
             // /ループ:ニュース
           .block-news-footer
@@ -102,7 +104,8 @@ block content
             h3.title.title-secondary FACEBOOK
           .block-facebook-main.js-height
             p.color-gray 旬な情報を定期的に発信中！
-            iframe(src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffp.It.YCF%2F&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=362851420751625" width="500" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media")
+            .text-center
+              iframe(src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffp.It.YCF%2F&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=362851420751625" width="500" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media")
           .block-facebook-footer
             a(href="https://www.facebook.com/fp.It.YCF/" target="_blank").button.button-rounded.button-medium.button-fblue FACEBOOKページへ
   .block-common.block-top

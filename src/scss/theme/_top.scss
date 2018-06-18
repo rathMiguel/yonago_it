@@ -59,10 +59,9 @@
       bottom: 40px;
     }
     @include media(sm) {
-      bottom: 60px;
+      bottom: 40px;
       padding-left: 0;
       padding-right: 0;
-      display: none !important;
     }
     li{
       margin-left: 10px;
@@ -95,6 +94,13 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
+  @include media(sm){
+    display: block;
+    flex-wrap: wrap;
+  }
+  @include media(md){
+    flex-wrap: wrap;
+  }
 }
 
 .area-shoplist-main{
@@ -110,14 +116,45 @@
 .item-block-shop{
   color: $base-font-color;
   text-decoration: none;
-  max-width: 260px;
   display: block;
   margin-left: 10px;
   margin-right: 10px;
+  overflow: hidden;
+  @include media(mdu){
+    max-width: 260px;
+    margin-bottom: 20px;
+  }
+  @include media(sm){
+    border-bottom: 1px solid #DDD;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
   
   .block-shop-photo{
     margin-bottom: 5px;
     position: relative;
+    @include media(sm){
+      width: 120px;
+      float: left;
+    }
+  }
+
+
+  .block-shop-content{
+    @include media(sm){
+      padding-left: 130px;
+    }
+  }
+
+  .block-shop-footer{
+    @include media(mdu){
+      display: none;
+    }
+    @include media(sm){
+      text-align: right;
+      color: $color-primary;
+      font-size: 12px;
+    }
   }
 
   .block-shop-cat{
@@ -127,6 +164,9 @@
     background-color: #FF7573;
     color: #FFF;
     padding: 3px 10px;
+    @include media(sm){
+      font-size: 10px;
+    }
   }
   
   .title-shop-name{
@@ -138,6 +178,9 @@
     li{
       display: inline-block;
       margin-right: 1em;
+      @include media(sm){
+        font-size: 11px;
+      }
       
       .fa{
         margin-right: 0.3em;
@@ -151,22 +194,42 @@
 //
 
 .block-feature-list{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+
+  @include media(mdu){
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  @include media(sm){
+    margin-left: -1px;
+    margin-right: -1px;
+  }
   
   img{
     vertical-align: bottom;
   }
+
+
 }
 
 .item-block-feature{
   margin: 5px;
   display: block;
+  box-sizing: border-box;
+  
+  @include media(sm){
+    @include grid-content(50%, 2, 0, 0);
+    margin-right: 0;
+    padding-right: 1px;
+    padding-left: 1px;
+    margin-bottom: 2px;
+  }
 }
 
 .block-feature-photo{
-  width: 260px;
+  @include media(mdu){
+    width: 260px;
+  }
 }
 
 //
@@ -187,12 +250,15 @@
   .block-divider{
     float: right;
     box-sizing: border-box;
-    max-width: 600px;
     padding: 15px;
     @include media(sm){
       padding: 25px;
     }
+    @include media(md){
+      width: 100%;
+    }
     @include media(lg){
+      max-width: 600px;
       padding: 35px;
     }
   }
@@ -204,6 +270,12 @@
   .block-divider{
     float: left;
   }
+
+  iframe{
+    @include media(sm){
+      width: 100%;
+    }
+  }
 }
 
 .text-date{
@@ -213,7 +285,10 @@
 }
 
 .block-news-footer{
-  text-align: right;
+  text-align: center;
+  @include media(lg){
+    text-align: right;
+  }
 }
 
 .item-block-news{
@@ -221,15 +296,27 @@
   border-bottom: 1px dashed #CCC;
   margin-bottom: 10px;
   padding-bottom: 10px;
+  color: #222;
+  text-decoration: none;
+  display: block;
   .block-news-photo{
     float: left;
+    @include media(sm){
+      width: 100px;
+    }
   }
 
   .block-news-content{
     padding-left: 150px;
+    @include media(sm){
+      padding-left: 110px;
+    }
     
     .news-excerpt{
       margin-bottom: 0;
+      @include media(sm){
+        display: none;
+      }
     }
   }
 }
@@ -249,4 +336,8 @@
 
 .block-facebook-footer{
   margin-top: 20px;
+  text-align: center;
+  @include media(lg){
+    text-align: left;
+  }
 }

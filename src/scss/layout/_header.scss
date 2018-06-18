@@ -14,15 +14,27 @@ header#header
 */
 
 header#header{
-	@include media(mdu){
-    
+  @include media(sm){
+    position: fixed;
+    background-color: #FFF;
+    width: 100%;
+    z-index: 1010;
+    padding-top: 14px;
+    box-shadow: 0 2px 2px rgba(#000, 0.1);
+    height: 50px 14px;
+    top: 0px;
+    left: 0;
   }
-
   .header-logo{
     @include media(mdu){
       text-align: center;
       margin-top: 20px;
       margin-bottom: 15px;
+    }
+    @include media(sm){
+      width: 40px;
+      padding-top: 10px;
+      float: left;
     }
   }
 
@@ -32,6 +44,19 @@ header#header{
       font-size: 16px;
       font-family: $ja_min;
     }
+    @include media(sm){
+      position: fixed;
+      font-size: 10px;
+      z-index: 1020;
+      background-color: #EEE;
+      width: 100%;
+      left: 0;
+      top: 0;
+      padding: 2px 10px;
+      p{
+        margin-bottom: 0;
+      }
+    }
   }
 }
 
@@ -40,11 +65,24 @@ header#header{
     border-top: 1px solid #707070;
     border-bottom: 1px solid #707070;
   }
+  @include media(sm){
+    position: fixed;
+    left: 0;
+    top: 64px;
+    width: 100%;
+    z-index: 1010;
+    background-color: #FFF;
+    display: none;
+  }
 
   a{
     color: $base-font-color;
     text-decoration: none;
-    
+    @include media(sm){
+      display: block;
+      padding: 10px 15px;
+      background-color: #FEFEFE;
+    }
   }
 
   .list-global{
@@ -52,6 +90,9 @@ header#header{
       text-align: center;
       font-size: 17px;
       font-weight: 700;
+    }
+    @include media(sm){
+      border-top: 1px solid #DDD;
     }
     li{
       @include media(mdu){
@@ -63,12 +104,19 @@ header#header{
           margin-left: -1.25em;
         }
       }
+      @include media(sm){
+        border-bottom: 1px solid #DDD;
+      }
 
       a{
         transition: all 0.2s ease;
         @include media(mdu){
           display: inline-block;
           padding: 12px 1.25em;
+        }
+
+        &:before{
+
         }
 
         &:hover{
@@ -79,5 +127,117 @@ header#header{
         }
       }
     }
+  }
+}
+
+//
+// navbars
+//
+
+.nav-bars,
+.nav-bars .bars {
+  display: inline-block;
+  transition: all .4s;
+  box-sizing: border-box;
+}
+.nav-bars {
+  @include media(mdu){
+    display: none;
+  }
+  @include media(sm){
+    position: fixed;
+    right: 10px;
+    top: 18px;
+    width: 44px;
+    height: 44px;
+    z-index: 1010;
+  }
+}
+.nav-bars .bars {
+  position: absolute;
+  left: 50%;
+  width: 25px;
+  margin-left: -12.5px;
+  height: 2px;
+  background-color: #333;
+  border-radius: 0px;
+}
+.nav-bars .bars:nth-of-type(1) {
+  top: 14px;
+}
+.nav-bars .bars:nth-of-type(2) {
+  top: 21px;
+}
+.nav-bars .bars:nth-of-type(3) {
+  bottom: 14px;
+}
+
+@keyframes menu-bar01 {
+  0% {
+    transform: translateY(10px) rotate(45deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(0);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
+
+@keyframes menu-bar02 {
+  0% {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(0);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
+
+@keyframes active-menu-bar01 {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(10px) rotate(0);
+  }
+  100% {
+    transform: translateY(10px) rotate(45deg);
+  }
+}
+
+@keyframes active-menu-bar03 {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(-10px) rotate(0);
+  }
+  100% {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+}
+
+// is-open
+
+.is-navopen{
+  .nav-bars span:nth-of-type(1) {
+    transform: translateY(7px) rotate(45deg);
+    background-color: #000;
+  }
+
+  .nav-bars span:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  .nav-bars span:nth-of-type(3) {
+    transform: translateY(-7px) rotate(-45deg);
+    background-color: #000;
+  }
+
+  #nav-mobile{
+    right: 0;
   }
 }
