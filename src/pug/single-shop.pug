@@ -2,4 +2,117 @@ extends /templates/_layout
 block vars
   - var label = shopSingle;
 block content
-  
+  .wrapper
+    .rows
+      .cols.col-12
+        .block-header
+          img(src="https://placehold.jp/1200x700.png", alt="" width="80%")
+    .block-header-text
+      h1 るぺりえ工房
+      p テキストテキストテキストテキストテキストテキストテキストテキスト
+      p テキストテキストテキストテキストテキストテキストテキストテキスト
+      p テキストテキストテキストテキストテキストテキストテキストテキスト
+      p テキストテキストテキストテキストテキストテキストテキストテキスト
+      
+    .block-contribution
+      .contribution-header
+        h1.title.title-block-header 見出し
+      .contribution-content
+        h2 見出し
+        h3 テキストテキストテキストテキストテキストテキスト
+        h4 テキストテキストテキストテキストテキストテキスト
+        h5 テキストテキストテキストテキストテキストテキスト
+        h6 テキストテキストテキストテキストテキストテキスト
+        table
+          tr
+            th 見出し
+            th 見出し
+            th 見出し
+          tr
+            td 内容
+            td 内容
+            td 内容
+          tr
+            td 内容
+            td 内容
+            td 内容
+          tr
+            td 内容
+            td 内容
+            td 内容    
+        table
+          tr
+            th 見出し
+            td 内容
+            td 内容
+          tr
+            th 見出し
+            td 内容
+            td 内容
+          tr
+            th 見出し
+            td 内容
+            td 内容
+            
+      .shop-infomation        
+        h1 店舗情報
+        img(src="https://placehold.jp/260x170.png", alt="")
+        p 住所　鳥取県米子市
+        p 営業時間　毎週木曜日10:30～15:30
+        p 定休日　土・日曜日
+        p 公式サイト　url
+        p PR　テキストテキストテキストテキストテキストテキスト
+      
+      h4
+      #mapField
+      
+      .block-share
+        p この記事はいかがでしたか？
+        p 気に入りましたらシェアお願いします！
+        i.fab.fa-facebook
+        i.fab.fa-twitter
+        i.fab.fa-line
+      .block-coupon
+        p 最後までお読みいただき、ありがとうございました。
+        p お礼にクーポンをプレゼント致します。
+        p ボタンを押し、表示された画像を店舗の方にお見せください。
+        p （※有効期限にご注意ください）
+        a(href="#").button.button-rounded.button-medium.button-primary クーポンはこちら
+      
+      .block-relation
+        .next-page
+          a(hred="#") 次のページ
+            i.fa.fa-angle-left
+            p 英語塾
+        .back-page
+          a(hred="#") 前のページ
+            i.fa.fa-angle-right
+            p デジタルハリウッドSTUDIO米子
+        .area-shoplist-main
+          .block-shop-list
+            // ループ:店舗リスト
+            - var i = 1;
+            while i <= 4
+              a(href="single.html").item-block.item-block-shop
+                .block-shop-photo
+                  img(src="https://placehold.jp/260x170.png", alt="")
+                  span.block-shop-cat.ca-yasugi  安来市
+                .block-shop-content
+                  h3.title.title-shop-name 道の駅　あらエッサ
+                  ul.list-shop-tags
+                    li
+                      span.fa.fa-tag
+                      |遊ぶ
+                    li
+                      span.fa.fa-tag
+                      |食べる
+                    li
+                      span.fa.fa-tag
+                      |体験する
+                  .block-shop-footer
+                    span.text-primary 詳しく見る
+              - i++;
+            // /ループ:店舗リスト
+        
+
+        

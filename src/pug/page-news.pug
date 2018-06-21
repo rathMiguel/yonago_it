@@ -2,4 +2,18 @@ extends /templates/_layout
 block vars
   - var label = news;
 block content
-  
+  .area-news-main
+    .block-header
+      h2.title.title-block-header NEWS & BLOG
+    //.block-news loop 
+    - for (var i = 0; i < 1; i++)
+      .block-news
+        .block-news-photo
+          img(src="https://placehold.jp/260x170.png", alt="")
+        .block-news-content
+          p 2018/06/21
+          h3.title.title-news メガネルームeyeさんに潜入取材に行ってきました！
+          p テキストテキストテキストテキストテキストテキストテキスト
+        .block-news-footer
+          a(href="#").button.button-rounded.button-medium.button-primary もっと見る
+    //.block-news loop END
