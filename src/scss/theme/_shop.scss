@@ -1,2 +1,84 @@
 @charset "utf-8";
 
+//ウィンドウ幅が0〜320pxの場合に適用するscss
+@media screen and (max-width: 320px){
+//見出し
+  .wrapper{
+    .block-header{
+      margin:  10% 0;
+    }
+  }
+//見出し END
+//フィルター
+  .block-filter{
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    p{
+      display: none;
+    }
+    a{
+      margin: 5px 0px 0px 5px;
+    }
+  }
+//フィルター END
+//店舗一覧
+  .item-block-shop{
+    position: relative;
+    .block-shop-footer{
+      position: absolute;
+      right: 0;
+      bottom: 7px;
+    }
+  }
+//店舗一覧 END
+
+}
+//ウィンドウ幅が0〜320pxの場合に適用するscss END
+
+
+//ウィンドウ幅が321px〜767pxの場合に適用するscss
+@media screen and(min-width:321px){
+//見出し
+  .wrapper{
+    .block-header{
+      margin: 10% 0;
+    }
+  }
+//見出し END
+  .block-filter{
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    p{
+      display: none;
+    }
+    a{
+      margin: 10px 5px 0px 5px;
+    }
+  }
+//店舗一覧
+  .item-block-shop{
+    position: relative;
+    .block-shop-footer{
+      position: absolute;
+      right: 0;
+      bottom: 7px;
+    }
+  }
+//店舗一覧 END
+
+
+
+}
+//ウィンドウ幅が321px〜767pxの場合に適用するscss END
+
+//ウィンドウ幅が767px〜の場合に適用するscss
+@media screen and(min-width:767px){
+
+}
+//ウィンドウ幅が768px〜の場合に適用するscss END
