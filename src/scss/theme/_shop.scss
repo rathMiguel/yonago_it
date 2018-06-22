@@ -11,26 +11,30 @@
 //見出し END
 //フィルター
   .block-filter{
-    margin-bottom: 50px;
     display: flex;
     justify-content: flex-start;
-    align-items: center;
     flex-wrap: wrap;
-    p{
-      display: none;
-    }
+    margin-left: 2%;
     a{
       margin: 5px 0px 0px 5px;
     }
   }
 //フィルター END
 //店舗一覧
-  .item-block-shop{
-    position: relative;
-    .block-shop-footer{
-      position: absolute;
-      right: 0;
-      bottom: 7px;
+  .area-shoplist-main{
+    margin-top: 10px;
+    .item-block-shop{
+      position: relative;
+      .block-shop-footer{
+        position: absolute;
+        right: 0;
+        bottom: 7px;
+      }
+    }
+  }
+  .block-shop-content{
+    .title-shop-name{
+      font-size: 14px;
     }
   }
 //店舗一覧 END
@@ -48,20 +52,20 @@
     }
   }
 //見出し END
+//フィルター
   .block-filter{
-    margin-bottom: 50px;
     display: flex;
     justify-content: flex-start;
-    align-items: center;
     flex-wrap: wrap;
-    p{
-      display: none;
-    }
+    margin-left: 2%;
     a{
       margin: 10px 5px 0px 5px;
     }
   }
+//フィルター END
 //店舗一覧
+.area-shoplist-main{
+  margin-top: 15px;
   .item-block-shop{
     position: relative;
     .block-shop-footer{
@@ -70,6 +74,7 @@
       bottom: 7px;
     }
   }
+}
 //店舗一覧 END
 
 
@@ -79,6 +84,36 @@
 
 //ウィンドウ幅が767px〜の場合に適用するscss
 @media screen and(min-width:767px){
+//見出し
+  .wrapper{
+    .block-header{
+      margin: 10% 0;
+    }
+  }
+//見出し END
+//フィルター
+  .block-filter{
+    max-width: 1110px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    a{
+      margin: 10px 5px 0px 5px;
+      width: 100%;
+    }
+  }
+//フィルター END
+//店舗一覧
+  .block-shop-list{
+    flex-wrap: wrap;
+  }
+  .area-shoplist-main {
+    .item-block-shop{
+      margin-top: 40px;
+    }
+  }
 
+//店舗一覧 END
 }
 //ウィンドウ幅が768px〜の場合に適用するscss END

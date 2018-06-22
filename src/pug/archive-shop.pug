@@ -6,16 +6,16 @@ block content
     .block-header
       h2.title.title-block-header 掲載店舗一覧
     .block-filter
-      p フィルター：
-        a(href="#").button.button-rounded.button-medium.button-primary 全て
-        a(href="#").button.button-rounded.button-medium.button-primary 安来市
-        a(href="#").button.button-rounded.button-medium.button-primary 米子市
-        a(href="#").button.button-rounded.button-medium.button-primary 倉吉市
+      a(href="#").button.button-rounded.button-primary 全て
+      a(href="#").button.button-rounded.button-primary 安来市
+      a(href="#").button.button-rounded.button-primary 米子市
+      a(href="#").button.button-rounded.button-primary 境港市
+      a(href="#").button.button-rounded.button-primary 倉吉市
     .area-shoplist-main
       .block-shop-list
         // ループ:店舗リスト
         - var i = 1;
-        while i <= 6
+        while i <= 9
           a(href="single.html").item-block.item-block-shop
             .block-shop-photo
               img(src="https://placehold.jp/260x170.png", alt="")
