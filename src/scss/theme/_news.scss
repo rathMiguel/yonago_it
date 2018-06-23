@@ -12,8 +12,8 @@
 
 //共通scss END
 
-//ウィンドウ幅が0〜320pxの場合に適用するscss
-@media screen and (max-width: 320px){
+//ウィンドウ幅が0〜767pxの場合に適用するscss
+@include media(sm){
 //ニュース
   .item-block-news{
     border-bottom: 1px solid #DDD;
@@ -50,11 +50,10 @@
   }
 //ニュース END
 }
-//ウィンドウ幅が0〜320pxの場合に適用するscss END
+//ウィンドウ幅が0〜767pxの場合に適用するscss END
 
-
-//ウィンドウ幅が321px〜767pxの場合に適用するscss
-@media screen and(min-width:321px){
+//ウィンドウ幅が768px～960pxの場合に適用するscss
+@include media(md){
 //ニュース
   .item-block-news{
     max-width: 820px;
@@ -78,10 +77,6 @@
     .block-news-content{
       padding-left: 170px;
     }
-    .block-news-text{
-      max-height: 2em;
-      overflow: hidden;
-    }
     .block-news-footer{
       text-align: right;
       color: #FFC43A;
@@ -93,17 +88,20 @@
   }
 //ニュース　END
 }
-//ウィンドウ幅が321px〜767pxの場合に適用するscss END
+//ウィンドウ幅が768px～960pxの場合に適用するscss END
 
-//ウィンドウ幅が767px〜の場合に適用するscss
-@media screen and(min-width:767px){
-
+//ウィンドウ幅が768px～の場合に適用するscss
+@include media(mdu){
 //ニュース
   .item-block-news{
+    max-width: 820px;
+    border-bottom: 1px solid #DDD;
+    position: relative;
     margin: 0 auto;
     margin-bottom: 20px;
     .title-news-name{
       font-size: 1.4em;
+      margin: 5px 0;
     }
     p{
       margin: 0;
@@ -119,12 +117,15 @@
     .block-news-content{
       padding-left: 340px;
     }
-    .block-news-text{
-      max-height: initial;
-      overflow: initial;
+    .block-news-footer{
+      text-align: right;
+      color: #FFC43A;
+      font-size: 12px;
+      position: absolute;
+      right: 0;
+      bottom: 5px;
     }
   }
 //ニュース　END
-
 }
-//ウィンドウ幅が768px〜の場合に適用するscss END
+//ウィンドウ幅が768px～の場合に適用するscss END
