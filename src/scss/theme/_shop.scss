@@ -12,8 +12,8 @@
 
 //共通scss END
 
-//ウィンドウ幅が0〜320pxの場合に適用するscss
-@media screen and (max-width: 320px){
+//ウィンドウ幅が0〜767pxの場合に適用するscss
+@include media(sm){
 
 //フィルター
   .block-filter{
@@ -46,11 +46,11 @@
 //店舗一覧 END
 
 }
-//ウィンドウ幅が0〜320pxの場合に適用するscss END
+//ウィンドウ幅が0〜767pxの場合に適用するscss END
 
 
 //ウィンドウ幅が321px〜767pxの場合に適用するscss
-@media screen and(min-width:321px){
+@include media(md){
 
 //フィルター
   .block-filter{
@@ -83,7 +83,7 @@
 //ウィンドウ幅が321px〜767pxの場合に適用するscss END
 
 //ウィンドウ幅が767px〜の場合に適用するscss
-@media screen and(min-width:767px){
+@include media(mdu){
 
 //フィルター
   .block-filter{
