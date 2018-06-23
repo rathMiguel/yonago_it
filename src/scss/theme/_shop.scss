@@ -1,7 +1,7 @@
 @charset "utf-8";
 
-//ウィンドウ幅が0〜320pxの場合に適用するscss
-@media screen and (max-width: 320px){
+//共通scss
+
 //見出し
   .wrapper{
     .block-header{
@@ -9,6 +9,12 @@
     }
   }
 //見出し END
+
+//共通scss END
+
+//ウィンドウ幅が0〜320pxの場合に適用するscss
+@media screen and (max-width: 320px){
+
 //フィルター
   .block-filter{
     display: flex;
@@ -45,13 +51,7 @@
 
 //ウィンドウ幅が321px〜767pxの場合に適用するscss
 @media screen and(min-width:321px){
-//見出し
-  .wrapper{
-    .block-header{
-      margin: 10% 0;
-    }
-  }
-//見出し END
+
 //フィルター
   .block-filter{
     display: flex;
@@ -84,13 +84,7 @@
 
 //ウィンドウ幅が767px〜の場合に適用するscss
 @media screen and(min-width:767px){
-//見出し
-  .wrapper{
-    .block-header{
-      margin: 10% 0;
-    }
-  }
-//見出し END
+
 //フィルター
   .block-filter{
     max-width: 1110px;

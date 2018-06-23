@@ -1,2 +1,169 @@
 @charset "utf-8";
 
+//共通scss
+ .wrapper-single{
+   max-width: 960px;
+   margin: 0 auto;
+   background-color: #fff;
+//店舗紹介
+   .block-header{
+     margin-top: 10%;
+     .block-header-text{
+       width: 80%;
+       margin: 0 auto;
+       h1{
+         border-bottom:solid 1px #222;
+         padding-bottom: 10px;
+         text-align: left;
+       }
+       p{
+         text-align: left;
+       }
+     }
+   }
+//店舗紹介 END
+ }
+//投稿
+  .block-contribution{
+      width: 80%;
+      margin: 0 auto;
+    .contribution-header{
+      border-bottom:solid 1px #222;
+      padding-bottom: 10px;
+      h1{
+        text-align: center;
+      }
+    }
+    .contribution-content,
+    .contribution-content2{
+        margin-top: 100px;
+      table{
+        width: 100%;
+        table-layout: fixed;
+      }
+      th{
+        border-bottom:solid 1px #222;
+        padding-bottom: 10px;
+      }
+      td{
+        border-bottom:solid 1px #222;
+        padding-bottom: 10px;
+        text-align: center;
+      }
+    }
+//投稿　END
+//店舗情報
+    .block-shop-infomation{
+      margin-top: 100px;
+      .title-block-header{
+        margin-bottom: 10%;
+        text-align: center;
+      }
+      .shop-infomation-photo{
+        max-width: 260px;
+        float: left;
+      }
+      .shop-infomation-content{
+        padding-left: 320px;
+      }
+      p{
+        margin: 0;
+        border-bottom:solid 1px #222;
+        padding-bottom: 10px;
+      }
+      p:first-child{
+        border-top: solid 1px #222;
+      }
+    }
+//店舗情報　END
+//シェア
+  .block-share{
+    margin-top: 100px;
+    text-align: center;
+    .share-icon{
+      display: flex;
+      justify-content: center;
+    }
+  }
+//シェア END
+//クーポン
+  .block-coupon{
+    margin-top: 100px;
+    text-align: center;
+  }
+//クーポン END
+//関連
+  .block-relation{
+    margin-top: 100px;
+    .relation-link{
+      height: 150px;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: solid 1px #222;
+      a{
+        text-decoration: none;
+        color: #222;
+      }
+      p{
+        margin: 0;
+      }
+    }
+    .next-page{
+      width: 50%;
+      text-align: right;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-right: solid 1px #222;
+      padding-right: 20px;
+      position: relative;
+      p.sub{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 10px;
+      }
+      i.fa.fa-angle-left{
+
+      }
+    }
+    .back-page{
+      width: 50%;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 20px;
+      position: relative;
+      p.sub{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 10px;
+      }
+    }
+    .item-block-shop{
+      max-width: 160px;
+    }
+  }
+//関連 END
+  }
+//共通scss END
+
+//ウィンドウ幅が0〜320pxの場合に適用するscss
+@media screen and (max-width: 320px){
+
+}
+//ウィンドウ幅が0〜320pxの場合に適用するscss END
+
+//ウィンドウ幅が321px〜767pxの場合に適用するscss
+@media screen and(min-width:321px){
+
+}
+//ウィンドウ幅が321px〜767pxの場合に適用するscss END
+
+//ウィンドウ幅が767px〜の場合に適用するscss
+@media screen and(min-width:767px){
+
+}
+//ウィンドウ幅が767px〜の場合に適用するscss END
