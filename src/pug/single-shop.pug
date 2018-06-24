@@ -5,7 +5,8 @@ block content
 
   .wrapper-single
     .block-header
-      img(src="https://placehold.jp/1200x700.png", alt="" width="80%")
+      .block-header-photo
+        img(src="https://placehold.jp/1200x700.png", alt="" width="80%")
       .block-header-text
         h1.title.title-block-header るぺりえ工房
         p テキストテキストテキストテキストテキストテキストテキストテキスト
@@ -65,14 +66,29 @@ block content
             
       .block-shop-infomation  
         h1.title.title-block-header 店舗情報
-        .shop-infomation-photo
-          img(src="https://placehold.jp/260x170.png", alt="")
         .shop-infomation-content
-          p 住所　鳥取県米子市
-          p 営業時間　毎週木曜日10:30～15:30
-          p 定休日　土・日曜日
-          p 公式サイト　url
-          p PR　テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+          .shop-infomation-photo
+            img(src="https://placehold.jp/260x170.png", alt="")
+          .shop-infomation-text
+            table
+              tr
+                th 住所
+                td 鳥取県米子市
+              tr
+                th 営業時間
+                td 毎週木曜日10:30～15:30
+              tr
+                th 定休日
+                td 土・日曜日
+              tr
+                th 公式サイト
+                td 
+                  a(href="#") URL
+              tr
+                th PR
+                td テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+          
+          
       
       h4
       #mapField
@@ -81,21 +97,23 @@ block content
         p この記事はいかがでしたか？
         p 気に入りましたらシェアお願いします！
         .share-icon
-          i.fab.fa-facebook
-          i.fab.fa-twitter
-          i.fab.fa-line
+          i.fab.fa-facebook.fa-3x.color-facebook
+          i.fab.fa-twitter-square.fa-3x.color-twitter
+          i.fab.fa-line.fa-3x.color-line
       .block-coupon
         p 最後までお読みいただき、ありがとうございました。
-        p お礼にクーポンをプレゼント致します。
+          br
+          |お礼にクーポンをプレゼント致します。
         p ボタンを押し、表示された画像を店舗の方にお見せください。
-        p （※有効期限にご注意ください）
+          br
+          |（※有効期限にご注意ください）
         a(href="#").button.button-rounded.button-medium.button-primary クーポンはこちら
       
       .block-relation
         .relation-link
           a(hred="#").next-page
             .block-next-page
-              i.fa.fa-angle-left
+              i.fa.fa-angle-left.fa-3x
             .block-next-page2
               p.sub 次のページ
               p 英語塾
@@ -104,9 +122,11 @@ block content
               p.sub 前のページ
               p デジタルハリウッドSTUDIO米子
             .block-back-page2
-              i.fa.fa-angle-right
+              i.fa.fa-angle-right.fa-3x
         .area-shoplist-main
-          p こちらの記事もいかがですか
+          .block-shop-list-header
+            i.fas.fa-stop.color-header
+            p こちらの記事もいかがですか
           .block-shop-list
             // ループ:店舗リスト
             - var i = 1;
