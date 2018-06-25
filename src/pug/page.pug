@@ -3,60 +3,75 @@ block vars
   - var label = page;
 block content
   .wrapper
-    .rows
-      .cols.col-12
-        .block-header
-          img(src="https://placehold.jp/1200x700.png", alt="" width="80%")
-    .block-header-text
-      h1 About I+ [イット]とは？
-      p テキストテキストテキストテキストテキストテキストテキストテキスト
-      p テキストテキストテキストテキストテキストテキストテキストテキスト
-      p テキストテキストテキストテキストテキストテキストテキストテキスト
-      p テキストテキストテキストテキストテキストテキストテキストテキスト
-      
-    .block-contribution
-      .contribution-header
-        h1.title.title-block-header 見出し
-      .contribution-content
-        h2 見出し
-        h3 テキストテキストテキストテキストテキストテキスト
-        h4 テキストテキストテキストテキストテキストテキスト
-        h5 テキストテキストテキストテキストテキストテキスト
-        h6 テキストテキストテキストテキストテキストテキスト
-        table
-          tr
-            th 見出し
-            th 見出し
-            th 見出し
-          tr
-            td 内容
-            td 内容
-            td 内容
-          tr
-            td 内容
-            td 内容
-            td 内容
-          tr
-            td 内容
-            td 内容
-            td 内容    
-        table
-          tr
-            th 見出し
-            td 内容
-            td 内容
-          tr
-            th 見出し
-            td 内容
-            td 内容
-          tr
-            th 見出し
-            td 内容
-            td 内容
-            
-      .block-share
-        p この記事はいかがでしたか？
-        p 気に入りましたらシェアお願いします！
-        i.fab.fa-facebook
-        i.fab.fa-twitter
-        i.fab.fa-line
+    .wrapper-single
+      .block-header
+        .block-header-photo
+          img(src="https://placehold.jp/1200x700.png", alt="" width="")
+        .block-header-text
+          h1.title.title-block-header About I+ [イット]とは？
+          p  I+[イット]はWebデザイナー養成スクール、
+            br
+            |デジタルハリウッドSTUDIO米子の受講生&卒業生たちで創っているフリーペーパーです。
+          p デジハリで学んだスキルを活用し、「デジタル×アナログの新しいカタチ」をコンセプトに学びながら情報発信をするフリーマガジン&Webサイトです。
+            br
+            |改行改行改行改行改行改行
+          p テキストテキストテキストテキストテキストテキストテキストテキスト
+            br
+            |改行改行改行改行改行改行
+          p テキストテキストテキストテキストテキストテキストテキストテキスト
+            br
+            |改行改行改行改行改行改行
+        .block-header-content
+          img(src="https://placehold.jp/1200x700.png", alt="" width="30%")
+          img(src="https://placehold.jp/1200x700.png", alt="" width="30%")
+          img(src="https://placehold.jp/1200x700.png", alt="" width="30%")
+          img(src="https://placehold.jp/1200x700.png", alt="" width="30%")
+        
+      .block-contribution
+        .contribution-header
+          h1.title.title-block-header 見出し
+          h2.title.title-block-header 見出し
+        .contribution-text
+          h3 テキストテキストテキストテキストテキストテキスト
+          h4 テキストテキストテキストテキストテキストテキスト
+          h5 テキストテキストテキストテキストテキストテキスト
+          h6 テキストテキストテキストテキストテキストテキスト
+        .contribution-content
+          table
+            tr
+              th 見出し
+              th 見出し
+              th 見出し
+            tr
+              td 内容
+              td 内容
+              td 内容
+            tr
+              td 内容
+              td 内容
+              td 内容
+            tr
+              td 内容
+              td 内容
+              td 内容 
+        .contribution-content2   
+          table
+            tr
+              th 見出し
+              td 内容
+              td 内容
+            tr
+              th 見出し
+              td 内容
+              td 内容
+            tr
+              th 見出し
+              td 内容
+              td 内容
+        .block-share
+          p この記事はいかがでしたか？
+          p 気に入りましたらシェアお願いします！
+          .share-icon
+            i.fab.fa-facebook.fa-3x.color-facebook
+            i.fab.fa-twitter-square.fa-3x.color-twitter
+            i.fab.fa-line.fa-3x.color-line

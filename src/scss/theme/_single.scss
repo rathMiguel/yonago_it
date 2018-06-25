@@ -1,19 +1,23 @@
 @charset "utf-8";
 
+//余白変数
+$pjmargin-top1: 10%;
+//余白変数
+
 //共通scss
  .wrapper-single{
-   max-width: 960px;
+   max-width: 860px;
    margin: 0 auto;
    padding-left: 20px;
    padding-right: 20px;
    background-color: #fff;
 //店舗紹介
    .block-header{
-     margin-top: 10%;
+     margin-top: $pjmargin-top1;
      .block-header-text{
        h1{
          border-bottom:solid 1px #222;
-         padding: 10px 0;
+         padding: 20px 0 10px 0;
          text-align: left;
        }
        p{
@@ -26,7 +30,7 @@
  }
 //投稿
   .block-contribution{
-      margin-top: 10%;
+      margin-top: $pjmargin-top1;
     .contribution-header{
       border-bottom:solid 1px #222;
       padding-bottom: 10px;
@@ -36,7 +40,7 @@
     }
     .contribution-content,
     .contribution-content2{
-        margin-top: 100px;
+        margin-top: $pjmargin-top1;
       table{
         width: 100%;
         table-layout: fixed;
@@ -55,7 +59,7 @@
 //投稿　END
 //店舗情報
     .block-shop-infomation{
-      margin-top: 100px;
+      margin-top: $pjmargin-top1;
       .title-block-header{
         margin-bottom: 10%;
         text-align: center;
@@ -95,12 +99,15 @@
     p{
       margin: 0;
     }
-    margin-top: 100px;
+    p:last-child{
+      margin-bottom: 1.6em;
+    }
+    margin-top: $pjmargin-top1;
     text-align: center;
     .share-icon{
-      margin-top: 30px;
       display: flex;
       justify-content: center;
+      margin-top: 1em;
       i{
         margin: 0 10px;
       }
@@ -118,13 +125,16 @@
 //シェア END
 //クーポン
   .block-coupon{
-    margin-top: 100px;
+    margin-top: $pjmargin-top1;
     text-align: center;
+    .button-primary{
+      margin-top: 10px;
+    }
   }
 //クーポン END
 //関連
   .block-relation{
-    margin-top: 100px;
+    margin-top: $pjmargin-top1;
     .relation-link{
       height: 150px;
       display: flex;
@@ -153,9 +163,6 @@
         right: 20px;
         font-size: 10px;
       }
-      i.fa.fa-angle-left{
-
-      }
     }
     .back-page{
       width: 50%;
@@ -175,23 +182,29 @@
     .area-shoplist-main{
       position: relative;
       .block-shop-list-header{
-        display: flex;
-        align-items: center;
-        position: absolute;
-        top: 40px;
-        p{
-          font-size: 1em;
-          margin: 3px 0 0 10px;
-        }
-        .color-header{
-          color: #FFC43A;
+        text-align: center;
+        margin-top: 40px;
+        .sub-header{
+          display: inline-block;
+          position: relative;
+          i{
+            position: absolute;
+            top: 3px;
+            left: 0;
+          }
+          p{
+            font-size: 1em;
+            margin: 0;
+            margin-left: 1.5em;
+          }
+          .color-header{
+            color: #FFC43A;
+          }
         }
       }
       .block-shop-list{
-        position: relative;
-        padding-top: 65px;
         .item-block-shop{
-          max-width: 160px;
+
         }
       }
     }
@@ -204,32 +217,33 @@
 //ウィンドウ幅が0〜767pxの場合に適用するscss
 @include media(sm){
 
-  .block-contribution{
-    .contribution-content,
-    .contribution-content2{
-      margin-top: 10%;
-    }
     .block-shop-infomation{
       .shop-infomation-content{
         flex-wrap: wrap;
         .shop-infomation-text{
           max-width: initial;
-          margin-top: 10%;
         }
       }
     }
-    .block-relation{
-      .item-block-shop{
-        max-width: initial;
-      }
+
+    .block-contribution
+    .block-relation
+    .area-shoplist-main
+    .block-shop-list-header{
+      text-align: center;
+      margin: 20px 0;
     }
-  }
+
 
 }
 //ウィンドウ幅が0〜767pxの場合に適用するscss END
 
 //ウィンドウ幅が768px〜の場合に適用するscss
 @include media(mdu){
-
+  .block-relation{
+    .item-block-shop{
+      max-width: 160px;
+    }
+  }
 }
 //ウィンドウ幅が767px〜の場合に適用するscss END
