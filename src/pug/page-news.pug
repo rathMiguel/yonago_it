@@ -3,23 +3,24 @@ block vars
   - var label = news;
 block content
   .wrapper
-    .block-header
-      h2.title.title-block-header NEWS & BLOG
-    .block-news-list
-      // ループ:ニュースリスト
-      - var i = 1;
-      while i <= 5
-        .item-block.item-block-news
-          .block-news-photo
-            img(src="https://placehold.jp/260x170.png", alt="")
-          .block-news-content
-            .block-news-header
-              p.date 2018/06/21
-              h3.title.title-news-name メガネルームeyeさんに潜入取材に行ってきました！
-            .block-news-text
-              p テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-            .block-news-footer
-              span.text-primary もっと見る
-        - i++;
-      // /ループ:ニュースリスト
+    .wrapper-news
+      .block-header
+        h2.title.title-block-header NEWS & BLOG
+      .block-news-list
+        // ループ:ニュースリスト
+        - var i = 1;
+        while i <= 5
+          .item-block.item-block-news
+            .block-news-photo
+              img(src="https://placehold.jp/260x170.png", alt="")
+            .block-news-content
+              .block-news-header
+                p.date 2018/06/21
+                h3.title.title-news-name メガネルームeyeさんに潜入取材に行ってきました！
+              .block-news-text
+                p テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+              .block-news-footer
+                span.text-primary もっと見る
+          - i++;
+        // /ループ:ニュースリスト
       
