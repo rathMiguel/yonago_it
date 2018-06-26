@@ -8,8 +8,6 @@ $pjmargin-top1: 10%;
  .wrapper-single{
    max-width: 860px;
    margin: 0 auto;
-   padding-left: 20px;
-   padding-right: 20px;
    background-color: #fff;
 //店舗紹介
    .block-header{
@@ -27,7 +25,6 @@ $pjmargin-top1: 10%;
      }
    }
 //店舗紹介 END
- }
 //投稿
   .block-contribution{
       margin-top: $pjmargin-top1;
@@ -56,43 +53,44 @@ $pjmargin-top1: 10%;
         text-align: center;
       }
     }
+  }
 //投稿　END
 //店舗情報
-    .block-shop-infomation{
-      margin-top: $pjmargin-top1;
-      .title-block-header{
-        margin-bottom: 10%;
-        text-align: center;
-      }
-      .shop-infomation-content{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-        .shop-infomation-photo{
-
-        }
-        .shop-infomation-text{
-          max-width: 60%;
-          table{
-            width: 100%;
-            teble-layout: fixed;
-          }
-          th,td{
-            margin: 0;
-            border-bottom:solid 1px #222;
-            padding: 10px;
-          }
-          tr:first-child{
-            border-top: solid 1px #222;
-          }
-          th{
-            width: 30%;
-            text-align: left;
-            font-weight: bold;
-          }
-        }
+  .block-shop-infomation{
+    margin-top: $pjmargin-top1;
+    .title-block-header{
+      margin-bottom: 10%;
+      text-align: center;
     }
+    .shop-infomation-content{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+      .shop-infomation-photo{
+
+      }
+      .shop-infomation-text{
+        max-width: 60%;
+        table{
+          width: 100%;
+          teble-layout: fixed;
+        }
+        th,td{
+          margin: 0;
+          border-bottom:solid 1px #222;
+          padding: 10px;
+        }
+        tr:first-child{
+          border-top: solid 1px #222;
+        }
+        th{
+          width: 30%;
+          text-align: left;
+          font-weight: bold;
+        }
+      }
+  }
 //店舗情報　END
 //シェア
   .block-share{
@@ -183,7 +181,7 @@ $pjmargin-top1: 10%;
       position: relative;
       .block-shop-list-header{
         text-align: center;
-        margin-top: 40px;
+        margin-top: 5%;
         .sub-header{
           display: inline-block;
           position: relative;
@@ -202,48 +200,49 @@ $pjmargin-top1: 10%;
           }
         }
       }
-      .block-shop-list{
-        .item-block-shop{
-
-        }
-      }
     }
 
   }
 //関連 END
-  }
-//共通scss END
+}//共通scss END
 
 //ウィンドウ幅が0〜767pxの場合に適用するscss
 @include media(sm){
-
-    .block-shop-infomation{
-      .shop-infomation-content{
-        flex-wrap: wrap;
-        .shop-infomation-text{
-          max-width: initial;
+//店舗情報
+  .block-shop-infomation{
+    .shop-infomation-content{
+      flex-wrap: wrap;
+      .shop-infomation-text{
+        max-width: initial;
+      }
+    }
+  }
+//店舗情報　END
+  //関連
+  .wrapper-single
+    .block-relation{
+      i{
+        font-size: 1.5em;
+      }
+      .next-page{
+        padding: 0 10px 0 3px;
+        p.sub{
+          right: 10px;
+        }
+      }
+      .back-page{
+        padding: 0 3px 0 10px;
+        p.sub{
+          left: 10px;
         }
       }
     }
-
-    .block-contribution
-    .block-relation
-    .area-shoplist-main
-    .block-shop-list-header{
-      text-align: center;
-      margin: 20px 0;
-    }
-
-
+  //関連 END
 }
 //ウィンドウ幅が0〜767pxの場合に適用するscss END
 
 //ウィンドウ幅が768px〜の場合に適用するscss
 @include media(mdu){
-  .block-relation{
-    .item-block-shop{
-      max-width: 160px;
-    }
-  }
+
 }
 //ウィンドウ幅が767px〜の場合に適用するscss END

@@ -64,92 +64,92 @@ block content
               td 内容
               td 内容
               
-        .block-shop-infomation  
-          h1.title.title-block-header 店舗情報
-          .shop-infomation-content
-            .shop-infomation-photo
-              img(src="https://placehold.jp/260x170.png", alt="")
-            .shop-infomation-text
-              table
-                tr
-                  th 住所
-                  td 鳥取県米子市
-                tr
-                  th 営業時間
-                  td 毎週木曜日10:30～15:30
-                tr
-                  th 定休日
-                  td 土・日曜日
-                tr
-                  th 公式サイト
-                  td 
-                    a(href="#") URL
-                tr
-                  th PR
-                  td テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-        
-        h4
-        #mapField
-        
-        .block-share
-          p この記事はいかがでしたか？
-          p 気に入りましたらシェアお願いします！
-          .share-icon
-            i.fab.fa-facebook.fa-3x.color-facebook
-            i.fab.fa-twitter-square.fa-3x.color-twitter
-            i.fab.fa-line.fa-3x.color-line
-        .block-coupon
-          p 最後までお読みいただき、ありがとうございました。
-            br
-            |お礼にクーポンをプレゼント致します。
-          p ボタンを押し、表示された画像を店舗の方にお見せください。
-            br
-            |（※有効期限にご注意ください）
-          a(href="#").button.button-rounded.button-medium.button-primary クーポンはこちら
-        
-        .block-relation
-          .relation-link
-            a(hred="#").next-page
-              .block-next-page
-                i.fa.fa-angle-left.fa-3x
-              .block-next-page2
-                p.sub 次のページ
-                p 英語塾
-            a(hred="#").back-page
-              .block-back-page
-                p.sub 前のページ
-                p デジタルハリウッドSTUDIO米子
-              .block-back-page2
-                i.fa.fa-angle-right.fa-3x
-          .area-shoplist-main
-            .block-shop-list-header
-              .sub-header
-                i.fas.fa-stop.color-header
-                p こちらの記事もいかがですか
-            .block-shop-list
-              // ループ:店舗リスト
-              - var i = 1;
-              while i <= 5
-                a(href="single.html").item-block.item-block-shop
-                  .block-shop-photo
-                    img(src="https://placehold.jp/260x170.png", alt="")
-                    span.block-shop-cat.ca-yasugi  安来市
-                  .block-shop-content
-                    h3.title.title-shop-name 道の駅　あらエッサ
-                    ul.list-shop-tags
-                      li
-                        span.fa.fa-tag
-                        |遊ぶ
-                      li
-                        span.fa.fa-tag
-                        |食べる
-                      li
-                        span.fa.fa-tag
-                        |体験する
-                    .block-shop-footer
-                      span.text-primary 詳しく見る
-                - i++;
-              // /ループ:店舗リスト
+      .block-shop-infomation  
+        h1.title.title-block-header 店舗情報
+        .shop-infomation-content
+          .shop-infomation-photo
+            img(src="https://placehold.jp/260x170.png", alt="")
+          .shop-infomation-text
+            table
+              tr
+                th 住所
+                td 鳥取県米子市
+              tr
+                th 営業時間
+                td 毎週木曜日10:30～15:30
+              tr
+                th 定休日
+                td 土・日曜日
+              tr
+                th 公式サイト
+                td 
+                  a(href="#") URL
+              tr
+                th PR
+                td テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+      
+      h4
+      #mapField
+      
+      .block-share
+        p この記事はいかがでしたか？
+        p 気に入りましたらシェアお願いします！
+        .share-icon
+          i.fab.fa-facebook.fa-3x.color-facebook
+          i.fab.fa-twitter-square.fa-3x.color-twitter
+          i.fab.fa-line.fa-3x.color-line
+      .block-coupon
+        p 最後までお読みいただき、ありがとうございました。
+          br
+          |お礼にクーポンをプレゼント致します。
+        p ボタンを押し、表示された画像を店舗の方にお見せください。
+          br
+          |（※有効期限にご注意ください）
+        a(href="#").button.button-rounded.button-medium.button-primary クーポンはこちら
+      
+      .block-relation
+        .relation-link
+          a(hred="#").next-page
+            .block-next-page
+              i.fa.fa-angle-left.fa-3x
+            .block-next-page2
+              p.sub 次のページ
+              p 英語塾
+          a(hred="#").back-page
+            .block-back-page
+              p.sub 前のページ
+              p デジタルハリウッドSTUDIO米子
+            .block-back-page2
+              i.fa.fa-angle-right.fa-3x
+        .area-shoplist-main
+          .block-shop-list-header
+            .sub-header
+              i.fas.fa-stop.color-header
+              p こちらの記事もいかがですか
+          .block-shop-list
+            // ループ:店舗リスト
+            - var i = 1;
+            while i <= 6
+              a(href="single.html").item-block.item-block-shop
+                .block-shop-photo
+                  img(src="https://placehold.jp/260x170.png", alt="")
+                  span.block-shop-cat.ca-yasugi  安来市
+                .block-shop-content
+                  h3.title.title-shop-name 道の駅　あらエッサ
+                  ul.list-shop-tags
+                    li
+                      span.fa.fa-tag
+                      |遊ぶ
+                    li
+                      span.fa.fa-tag
+                      |食べる
+                    li
+                      span.fa.fa-tag
+                      |体験する
+                  .block-shop-footer
+                    span.text-primary 詳しく見る
+              - i++;
+            // /ループ:店舗リスト
         
 
         
