@@ -1,7 +1,8 @@
 @charset "utf-8";
 
 //余白変数
-$pjmargin-top1: 10%;
+$pjmargin-top1: 100px;
+$pjmargin-top2: 50px;
 //余白変数
 
 //共通scss
@@ -10,9 +11,9 @@ $pjmargin-top1: 10%;
    margin: 0 auto;
    background-color: #fff;
 //店舗紹介
-   .block-header{
+   .block-introduction{
      margin-top: $pjmargin-top1;
-     .block-header-text{
+     .block-introduction-text{
        h1{
          border-bottom:solid 1px #222;
          padding: 20px 0 10px 0;
@@ -37,7 +38,7 @@ $pjmargin-top1: 10%;
     }
     .contribution-content,
     .contribution-content2{
-        margin-top: $pjmargin-top1;
+        margin-top: $pjmargin-top2;
       table{
         width: 100%;
         table-layout: fixed;
@@ -59,7 +60,6 @@ $pjmargin-top1: 10%;
   .block-shop-infomation{
     margin-top: $pjmargin-top1;
     .title-block-header{
-      margin-bottom: 10%;
       text-align: center;
     }
     .shop-infomation-content{
@@ -94,14 +94,14 @@ $pjmargin-top1: 10%;
 //店舗情報　END
 //シェア
   .block-share{
+    margin-top: $pjmargin-top1;
+    text-align: center;
     p{
       margin: 0;
     }
     p:last-child{
       margin-bottom: 1.6em;
     }
-    margin-top: $pjmargin-top1;
-    text-align: center;
     .share-icon{
       display: flex;
       justify-content: center;
@@ -208,6 +208,27 @@ $pjmargin-top1: 10%;
 
 //ウィンドウ幅が0〜767pxの場合に適用するscss
 @include media(sm){
+//余白
+.wrapper-single{
+  .block-introduction,
+  .block-contribution,
+  .block-shop-infomation,
+  .block-share,
+  .block-coupon,
+  .block-relation{
+    margin-top: $pjmargin-top2;
+  }
+  .block-contribution{
+    .contribution-content,
+    .contribution-content2{
+      margin-top: 30px;
+    }
+  }
+  .title-margin{
+    margin: 50px 0;
+  }
+}
+//余白 END
 //店舗情報
   .block-shop-infomation{
     .shop-infomation-content{

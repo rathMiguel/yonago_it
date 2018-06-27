@@ -4,9 +4,6 @@
   .wrapper-news{
     max-width: 860px;
     margin: 0 auto;
-    .block-header{
-      margin: 10% 0;
-    }
   }
   .item-block-news{
     border-bottom: 1px solid #DDD;
@@ -40,7 +37,6 @@
 @include media(sm){
 
   .item-block-news{
-
     .block-news-photo{
 
     }

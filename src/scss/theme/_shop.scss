@@ -1,7 +1,11 @@
 @charset "utf-8";
 
 //共通scss
-
+//見出し余白
+  .title-margin{
+   margin: 100px 0;
+  }
+ //見出し余白 END
 //フィルター
   .block-filter{
     max-width: 1110px;
@@ -27,6 +31,9 @@
 
 //ウィンドウ幅が0px〜767pxの場合に適用するscss
 @include media(sm){
+  .title-margin{
+    margin: 50px 0;
+  }
   .block-filter{
     justify-content: flex-start;
     flex-wrap: wrap;
