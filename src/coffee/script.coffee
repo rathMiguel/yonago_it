@@ -1,4 +1,5 @@
 $ ->
+  # トップのスライダー
   $('.js-slider-top').slick
     autoplay: true
     arrows: true
@@ -27,8 +28,13 @@ $ ->
       }
     ]
 
+  # セル同士の高さをそろえる
   $('.js-height').matchHeight()
 
+  # 店のフィルタリング
+  mixer = mixitup('.js-shoplist');
+
+  # ナビボタン
   $('.nav-bars').on 'click', ->
     $('body').toggleClass('is-navopen')
     $(this).next().slideToggle()

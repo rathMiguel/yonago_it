@@ -5,18 +5,28 @@ block content
   .wrapper
     .block-header
       h2.title.title-block-header.title-margin 掲載店舗一覧
-    .block-filter
-      a(href="#").button.button-rounded.button-primary 全て
-      a(href="#").button.button-rounded.button-primary 安来市
-      a(href="#").button.button-rounded.button-primary 米子市
-      a(href="#").button.button-rounded.button-primary 境港市
-      a(href="#").button.button-rounded.button-primary 倉吉市
+    .block-filter.shoplist-filter
+      button(data-filter="all").button.button-rounded.button-primary 全て
+      button(data-filter=".category-a").button.button-rounded.button-primary 安来市
+      button(data-filter=".category-b").button.button-rounded.button-primary 米子市
+      button(data-filter=".category-c").button.button-rounded.button-primary 境港市
+      button(data-filter=".category-d").button.button-rounded.button-primary 倉吉市
     .area-shoplist-main
-      .block-shop-list
+      .block-shop-list.js-shoplist
         // ループ:店舗リスト
         - var i = 1;
         while i <= 9
-          a(href="single.html").item-block.item-block-shop
+          - var j = i % 3
+          case j
+            when 0
+              - var cat = "category-a"
+            when 1
+              - var cat = "category-b"
+            when 2
+              - var cat = "category-c"
+            default
+              - var cat = "category-d"
+          a(href="single.html" class=cat).mix.item-block.item-block-shop
             .block-shop-photo
               img(src="https://placehold.jp/260x170.png", alt="")
               span.block-shop-cat.ca-yasugi  安来市

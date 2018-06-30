@@ -24,7 +24,9 @@
     "reset-css": "^2.2.1",
     "font-awesome": "^5.0.13",
     "slick-carousel": "^1.8.1",
-    "matchHeight": "^0.7.2"
+    "matchHeight": "^0.7.2",
+    "mixitup": "https://github.com/patrickkunka/mixitup/",
+    "instafeed.js": "^1.4.1"
   },
   "overrides": {
     "reset-css": {
@@ -32,7 +34,7 @@
     },
     "matchHeight": {
       "dependencies": {
-          "jquery": ">=1.7"
+        "jquery": ">=1.7"
       }
     },
     "slick-carousel": {
@@ -49,6 +51,11 @@
         "web-fonts-with-css/scss/fa-solid.scss",
         "web-fonts-with-css/scss/fontawesome.scss",
         "web-fonts-with-css/webfonts/**/*"
+      ]
+    },
+    "mixitup": {
+      "main": [
+        "dist/mixitup.min.js"
       ]
     }
   }
