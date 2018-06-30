@@ -46,7 +46,7 @@ prefix:
 # サイトの設定
 #===============================
 # 一般設定
-common: 
+common:
   siteName:              *title
   siteUrl:               *url
   encode:                'UTF-8'
@@ -66,10 +66,10 @@ common:
   trackingCode:          'UA-XXXXX-X'
 
 # トップページ
-top: 
+top:
   id:          'top'
   title:       'I＋[イット] 公式ウェブサイト - 鳥取県米子市周辺の地域情報'
-  depth:       ''
+  depth:       '/'
   dirName:     ''
   description: *description
   keywords:    ''
@@ -77,50 +77,50 @@ top:
   alternate:   null
 
 # 下層ページ（以降、pageは各ページに適宜つける）
-page: 
+page:
   id:          'page'
   title:       'I＋[イット] 公式ウェブサイト - 固定ページ'
-  depth:       ''
+  depth:       '/'
   dirName:     ''
   description: ''
   keywords:    ''
   cannonical:  null
   alternate:   null
 
-shop: 
+shop:
   id:          'page'
   title:       'トップページタイトル名'
-  depth:       ''
+  depth:       '/'
   dirName:     ''
   description: ''
   keywords:    ''
   cannonical:  null
   alternate:   null
 
-shopSingle: 
+shopSingle:
   id:          'page'
   title:       'トップページタイトル名'
-  depth:       ''
+  depth:       '/'
   dirName:     ''
   description: ''
   keywords:    ''
   cannonical:  null
   alternate:   null
 
-single: 
+single:
   id:          'page'
   title:       'トップページタイトル名'
-  depth:       ''
+  depth:       '/'
   dirName:     ''
   description: ''
   keywords:    ''
   cannonical:  null
   alternate:   null
 
-news: 
+news:
   id:          'page'
   title:       'トップページタイトル名'
-  depth:       ''
+  depth:       '/'
   dirName:     ''
   description: ''
   keywords:    ''

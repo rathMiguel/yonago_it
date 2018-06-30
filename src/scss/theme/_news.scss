@@ -5,6 +5,7 @@
     max-width: 860px;
     margin: 0 auto;
   }
+//ニュース
   .item-block-news{
     border-bottom: 1px solid #DDD;
     position: relative;
@@ -31,11 +32,12 @@
       color: #FFC43A;
     }
   }
+//ニュース END
 //共通scss END
 
 //ウィンドウ幅が0〜767pxの場合に適用するscss
 @include media(sm){
-
+//ニュース
   .item-block-news{
     .block-news-photo{
 
@@ -74,7 +76,7 @@
       z-index: 3;
     }
   }
-
+//ニュース END
 }
 //ウィンドウ幅が0〜767pxの場合に適用するscss END
 

@@ -180,20 +180,13 @@ $pjmargin-top2: 50px;
     .area-shoplist-main{
       position: relative;
       .block-shop-list-header{
-        text-align: center;
         margin-top: 5%;
         .sub-header{
-          display: inline-block;
-          position: relative;
-          i{
-            position: absolute;
-            top: 3px;
-            left: 0;
-          }
-          p{
-            font-size: 1em;
-            margin: 0;
-            margin-left: 1.5em;
+          text-align: center;
+          span{
+            font-weight: normal;
+            color: #222;
+            margin-left: 0.5em;
           }
           .color-header{
             color: #FFC43A;
@@ -242,7 +235,8 @@ $pjmargin-top2: 50px;
   //関連
   .wrapper-single
     .block-relation{
-      i{
+      .fa-angle-left,
+      .fa-angle-right{
         font-size: 1.5em;
       }
       .next-page{
