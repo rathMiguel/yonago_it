@@ -17,6 +17,10 @@ footer#footer{
   background-color: #232630;
   color: #E1E5E9;
   margin-top: 40px;
+  font-size: 14px;
+  @include media(sm){
+    font-size: 13px;
+  }
   @include media(md){
     margin-top: 60px;
   }

@@ -14,7 +14,7 @@ $ ->
     cssEase: 'ease-in-out'
     responsive: [
       {
-        breakpoint: 1367
+        breakpoint: 1200
         settings:
           centerMode: false
           variableWidth: false
@@ -31,11 +31,24 @@ $ ->
   # セル同士の高さをそろえる
   $('.js-height').matchHeight()
 
-  # 店のフィルタリング
-  mixer = mixitup('.js-shoplist');
-
   # ナビボタン
   $('.nav-bars').on 'click', ->
     $('body').toggleClass('is-navopen')
     $(this).next().slideToggle()
+
+  # instagramの表示
+  feed = new Instafeed({
+      clientId: 'c0fe0315af8346e79114e997e5808493',
+      get: 'user', 
+      userId: '4683078494',
+      accessToken:'4683078494.M2E4MWE5Zg==.MWJlYWJiYTE4ZTZh.NGM1ZmEyNzM5MWQ0MDZhYTdkNTk=',
+      links: true,
+      limit: 12,
+      resolution:'standard_resolution',
+      template: '<li><a href="{{link}}"><img src={{image}} alt={{caption}}></a></li>'
+  });
+  feed.run();
+
+  # 店のフィルタリング
+  mixer = mixitup('.js-shoplist');
   return

@@ -1,7 +1,9 @@
 @charset "utf-8";
 
-input:not([type="radio"]),
-input:not([type="checkbox"]),
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+input[type="email"],
 textarea,
 select {
   border: 1px solid #CCC;
@@ -9,10 +11,22 @@ select {
   padding: 8px 8px;
   font-family: inherit;
   font-size: inherit;
+  width: 100%;
   &:focus{
     background-color: lighten(#FFEFBF,8);
     box-shadow: 0 0 3px rgba(#73B9FF,0.8);
   }
+}
+
+.mwform-radio-field{
+  label{
+    padding: 10px 15px;
+  }
+}
+
+input[name="年齢"]{
+  width: 5em;
+  margin-right: 0.3em;
 }
 
 textarea{
@@ -154,4 +168,24 @@ select{
       }
     }
   }
+}
+
+.dl-form{
+  dt{
+    margin-bottom: 5px;
+    background-color: #EEE;
+    padding: 8px 5px;
+  }
+  dd{
+    margin-bottom: 1.5em;
+  }
+}
+
+.label-required{
+  color: #FFF;
+  background-color: $color-error;
+  display: inline-block;
+  margin-left: 0.2em;
+  padding: 2px 6px;
+  font-size: 0.86em;
 }

@@ -1,25 +1,12 @@
- <?php
-/*
-  Template Name: ニュースの一覧
-*/
-?>
 <?php get_header(); ?>
 <div class="wrapper">
   <div class="wrapper-news">
     <div class="block-header">
-      <h2 class="title title-block-header title-margin">NEWS & BLOG</h2>
+      <h2 class="title title-block-header title-margin">スペシャル特集</h2>
     </div>
     <div class="block-news-list">
       <!-- ループ:ニュースリスト-->
-      <?php
-        $args = array(
-          'post_type' => 'post',
-          'posts_per_page' => 10,
-          );
-          $the_query = new WP_Query( $args );
-          if($the_query->have_posts()):
-      ?>
-      <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+      <?php while ( have_posts() ) : the_post(); ?>
       <a href="<?php the_permalink() ?>" class="item-block item-block-news">
         <div class="block-news-photo">
           <?php 
@@ -41,7 +28,7 @@
           <div class="block-news-footer"><span class="text-primary">もっと見る</span></div>
         </div>
       </a>
-      <?php endwhile; endif; ?>
+      <?php endwhile; ?>
       <!-- /ループ:ニュースリスト-->
     </div>
   </div>

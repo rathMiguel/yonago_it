@@ -27,6 +27,8 @@ body {
   font-weight: 500;
   @include media(sm){
     padding-top: 64px;
+    font-size: 14px;
+    line-height: 1.6;
   }
 }
 

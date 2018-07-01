@@ -27,8 +27,6 @@ category: Layout
 
 .rows{
   @include cf;
-  margin-left: -$gutter;
-  margin-right: -$gutter;
   position: relative;
 }
 

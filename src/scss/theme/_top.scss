@@ -99,6 +99,8 @@
   }
 }
 
+
+
 .area-shoplist-main{
   overflow: hidden;
 }
@@ -156,6 +158,7 @@
   .block-shop-cat{
     position: absolute;
     right: 0;
+    top: 0;
     display: inline-block;
     background-color: #FF7573;
     color: #FFF;
@@ -174,6 +177,9 @@
     li{
       display: inline-block;
       margin-right: 1em;
+      @include media(mdu){
+        font-size: 14px;
+      }
       @include media(sm){
         font-size: 11px;
       }
@@ -224,7 +230,7 @@
 
 .block-feature-photo{
   @include media(mdu){
-    width: 260px;
+    width: 400px;
   }
 }
 

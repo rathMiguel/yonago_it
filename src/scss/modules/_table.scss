@@ -1,8 +1,6 @@
 @charset "utf-8";
 
 .table{
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
   width: 100%;
   th,td{
     padding: 12px;
@@ -10,14 +8,33 @@
   }
   th{
     font-weight: 700;
+    text-align: left;
   }
 }
 
 .table-default{
   th,td{
-    border: 1px solid #CCC;
+    border: 1px solid #DDD;
   }
   th{
     background-color: #EEE;
+  }
+}
+
+.table-info{
+  th,td{
+    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
+    
+    @include media(sm){
+      display: block;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+  }
+  th{
+    @include media(sm){
+      background-color: #DDD;
+    }
   }
 }

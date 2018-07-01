@@ -12,22 +12,28 @@ add_theme_support('post-thumbnails');
 //サムネイルサイズ
 add_image_size( 'medium-image', 600, 400, true );
 add_image_size( 'main-image', 935, 935 );
+add_image_size( 'top-image', 260, 170, true );
+add_image_size( 'banner-image', 600, 300, true );
+
+// CSS/JSの追加
+add_action('wp_enqueue_scripts','add_addJs');
+function add_addJs() {
+    wp_enqueue_script( 'googlemap', '//maps.google.com/maps/api/js?key=AIzaSyClcmiWXpi4bVOLBMY17mTCp2RipJf7OM0' );
+    wp_enqueue_script( 'vendor-script', get_template_directory_uri().'/js/vendor.js', array( 'jquery' ));
+    wp_enqueue_script( 'basic-script', get_template_directory_uri().'/js/script.js', array( 'jquery' ));
+}
+
+add_action('wp_enqueue_scripts', 'add_css' );
+function add_css(){
+  wp_enqueue_style( 'vendor-style', get_template_directory_uri().'/css/vendor.css', array());
+  wp_enqueue_style( 'basic-style', get_template_directory_uri().'/css/style.css', array());
+}
 
 //抜粋の文字数を制御
 function custom_excerpt_length( $length ) {
      return 100; 
 } 
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
-
-//ウィジェットエリア
-register_sidebar(
-  array(
-    'name'=>'サイドバー',
-    'before_widget'=>'<div class="panel-side">',
-    'after_widget'=>'</div>',
-    'before_title' => '<h3 class="title title-sidebar">',
-    'after_title' => '</h3>' 
-  ));
 
 // カスタム投稿タイプ：店舗一覧の追加
 add_action( 'init', 'create_post_type' );
@@ -38,6 +44,19 @@ function create_post_type() {
       'labels' => array(
         'name' => __( '掲載店舗一覧' ),
         'singular_name' => __( '掲載店舗一覧' ),
+      ),
+      'has_archive' => true,
+      'public' => true,
+      'menu_position' =>10
+    )
+  );
+
+  register_post_type( 'feature',
+    array(
+      'supports' => array('title','editor','tag','thumbnail','excerpt'),
+      'labels' => array(
+        'name' => __( 'スペシャル特集' ),
+        'singular_name' => __( 'スペシャル特集' ),
       ),
       'has_archive' => true,
       'public' => true,
@@ -74,17 +93,7 @@ register_taxonomy(
     'rewrite' => array( 'slug' => 'shop/shop-tag' ),
   )
 );
- 
-// メンバーの出力
-function itMembers(){
-  ob_start();
-  get_template_part('members');
-  return ob_get_clean();
-}
 
-add_shortcode('memberlist', 'itMembers');
-
-// テーブル用カスタムフィールドの出力
 function acf_table($field){
   $field_obj = get_field_object($field);
 
@@ -99,77 +108,20 @@ function acf_table($field){
   }
 }
 
-// カスタムウィジェット
-class MyWidgetItem extends WP_Widget {
-  function MyWidgetItem() {
-      parent::WP_Widget(false, $name = 'サイドバー用ブロック');
-    }
-    function widget($args, $instance) {
-        extract( $args );
-        $title = apply_filters( 'widget_title', $instance['title'] );
-        $subtitle = apply_filters( 'widget_subtitle', $instance['subtitle'] );
-        $body = apply_filters( 'widget_body', $instance['body'] );
-      ?>
-        <div class="panel-side">
-          <h3 class="title title-sidebar"><?php echo $title; ?>
-            <?php if ($subtitle): ?>
-            <small><?php echo $subtitle; ?></small>
-            <?php endif ?>
-          </h3>
-          <?php echo $body; ?>
-        </div>
-        <?php
-    }
-    function update($new_instance, $old_instance) {
-    $instance = $old_instance;
-    $instance['title'] = strip_tags($new_instance['title']);
-    $instance['subtitle'] = strip_tags($new_instance['subtitle']);
-    $instance['body'] = trim($new_instance['body']);
-        return $instance;
-    }
-    function form($instance) {
-        $title = esc_attr($instance['title']);
-        $subtitle = esc_attr($instance['subtitle']);
-        $body = esc_attr($instance['body']);
-        ?>
-        <p>
-          <label for="<?php echo $this->get_field_id('title'); ?>">
-          <?php _e('タイトル:'); ?>
-          </label>
-          <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
-        </p>
-        <p>
-          <label for="<?php echo $this->get_field_id('subtitle'); ?>">
-          <?php _e('サブタイトル:'); ?>
-          </label>
-          <input class="widefat" id="<?php echo $this->get_field_id('subtitle'); ?>" name="<?php echo $this->get_field_name('subtitle'); ?>" type="text" value="<?php echo $subtitle; ?>" />
-        </p>
-        <p>
-           <label for="<?php echo $this->get_field_id('body'); ?>">
-           <?php _e('サイトに表示されるコンテンツ:'); ?>
-           </label>
-           <textarea  class="widefat" rows="16" colls="20" id="<?php echo $this->get_field_id('body'); ?>" name="<?php echo $this->get_field_name('body'); ?>">
-           <?php echo $body; ?>
-           </textarea>
-        </p>
-        <?php
-    }
-}
-add_action('widgets_init', create_function('', 'return register_widget("MyWidgetItem");'));
-
 // カスタムヘッダー
-add_theme_support(
-  'custom-header',
-  array(
-    'width' => 1920,
-    'height' => 800,
-    'header-text' => false,
-    'default-image' => get_template_directory_uri() . '/images/img_main.jpg'
-  )
-);
+// add_theme_support(
+//   'custom-header',
+//   array(
+//     'width' => 1920,
+//     'height' => 800,
+//     'header-text' => false,
+//     'default-image' => get_template_directory_uri() . '/images/img_main.jpg'
+//   )
+// );
 
 // カスタムメニューを有効化
 add_theme_support('menus');
 
-register_nav_menu('topnav', '上部ナビゲーション');
+register_nav_menu('footernav1', 'フッターナビゲーション1');
+register_nav_menu('footernav2', 'フッターナビゲーション2');
 register_nav_menu('globalnav', 'グローバルナビゲーション');

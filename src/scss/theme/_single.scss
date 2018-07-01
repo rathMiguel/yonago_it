@@ -1,57 +1,70 @@
 @charset "utf-8";
 
 //余白変数
-$pjmargin-top1: 100px;
-$pjmargin-top2: 50px;
+$pjmargin-top1: 0px;
+$pjmargin-top2: 0px;
 //余白変数
 
 //共通scss
+.block-introduction-header{
+   h1{
+     border-bottom:solid 3px #666;
+     padding: 20px 0 10px 0;
+     text-align: left;
+   }
+}
+
  .wrapper-single{
    max-width: 860px;
    margin: 0 auto;
-   background-color: #fff;
-//店舗紹介
+   margin-top: 50px;
+   @include media(sm){
+     margin-top: 0;
+   }
+
+    //店舗紹介
    .block-introduction{
-     margin-top: $pjmargin-top1;
+     margin-bottom: 30px;
+     @include media(sm){
+       margin-bottom: 20px;
+     }
      .block-introduction-text{
-       h1{
-         border-bottom:solid 1px #222;
-         padding: 20px 0 10px 0;
-         text-align: left;
-       }
        p{
          margin-top: 1.6em;
          text-align: left;
        }
      }
    }
-//店舗紹介 END
-//投稿
+   
+  //店舗紹介 END
+  //投稿
   .block-contribution{
       margin-top: $pjmargin-top1;
     .contribution-header{
-      border-bottom:solid 1px #222;
+      border-bottom:solid 1px #CCC;
       padding-bottom: 10px;
       h1{
         text-align: center;
       }
     }
-    .contribution-content,
-    .contribution-content2{
+    .contribution-content{
         margin-top: $pjmargin-top2;
       table{
         width: 100%;
         table-layout: fixed;
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
       }
       th,td{
-        border-bottom:solid 1px #222;
+        border-bottom:solid 1px #CCC;
         padding: 10px;
       }
       th{
         font-weight: bold;
+        text-align: left;
       }
       td{
-        text-align: center;
+        
       }
     }
   }
@@ -62,34 +75,26 @@ $pjmargin-top2: 50px;
     .title-block-header{
       text-align: center;
     }
-    .shop-infomation-content{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    .shop-infomation-text{
+      max-width: 60%;
+      table{
+        width: 100%;
+        teble-layout: fixed;
+      }
+      th,td{
+        margin: 0;
+        border-bottom:solid 1px #222;
+        padding: 10px;
+      }
+      tr:first-child{
+        border-top: solid 1px #222;
+      }
+      th{
+        width: 30%;
+        text-align: left;
+        font-weight: bold;
+      }
     }
-      .shop-infomation-photo{
-
-      }
-      .shop-infomation-text{
-        max-width: 60%;
-        table{
-          width: 100%;
-          teble-layout: fixed;
-        }
-        th,td{
-          margin: 0;
-          border-bottom:solid 1px #222;
-          padding: 10px;
-        }
-        tr:first-child{
-          border-top: solid 1px #222;
-        }
-        th{
-          width: 30%;
-          text-align: left;
-          font-weight: bold;
-        }
-      }
   }
 //店舗情報　END
 //シェア
@@ -121,15 +126,6 @@ $pjmargin-top2: 50px;
     }
   }
 //シェア END
-//クーポン
-  .block-coupon{
-    margin-top: $pjmargin-top1;
-    text-align: center;
-    .button-primary{
-      margin-top: 10px;
-    }
-  }
-//クーポン END
 //関連
   .block-relation{
     margin-top: $pjmargin-top1;
@@ -194,7 +190,6 @@ $pjmargin-top2: 50px;
         }
       }
     }
-
   }
 //関連 END
 }//共通scss END
@@ -214,11 +209,11 @@ $pjmargin-top2: 50px;
   .block-contribution{
     .contribution-content,
     .contribution-content2{
-      margin-top: 30px;
+      // margin-top: 30px;
     }
   }
   .title-margin{
-    margin: 50px 0;
+    margin: 20px 0;
   }
 }
 //余白 END
@@ -261,3 +256,30 @@ $pjmargin-top2: 50px;
 
 }
 //ウィンドウ幅が767px〜の場合に適用するscss END
+
+//クーポン
+.area-coupon{
+  text-align: center;
+  background-color: #EFEFEF;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @include media(lg){
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .button-primary{
+    margin-top: 10px;
+  }
+}
+//クーポン END
+
+.block-introduction-photo{
+  @include media(sm){
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+
+.mapfield{
+  height: 400px;
+}
