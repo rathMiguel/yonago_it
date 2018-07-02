@@ -56,9 +56,11 @@
         </div>
         <div class="block-shop-content">
           <ul class="list-shop-tags">
-            <?php foreach ($terms_tag as $val): ?>
-              <li><span class="fa fa-tag"></span><?php echo $val->name ?></li>
-            <?php endforeach ?>
+            <?php if ($terms_tag): ?>
+              <?php foreach ($terms_tag as $val): ?>
+                <li><span class="fa fa-tag"></span><?php echo $val->name ?></li>
+              <?php endforeach ?>
+            <?php endif ?>
           </ul>
           <h3 class="title title-shop-name"><?php echo $title ?></h3>
           <?php 
