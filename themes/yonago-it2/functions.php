@@ -18,7 +18,7 @@ add_image_size( 'banner-image', 600, 300, true );
 // CSS/JSの追加
 add_action('wp_enqueue_scripts','add_addJs');
 function add_addJs() {
-    wp_enqueue_script( 'googlemap', '//maps.google.com/maps/api/js?key=AIzaSyClcmiWXpi4bVOLBMY17mTCp2RipJf7OM0' );
+    wp_enqueue_script( 'googlemap', '//maps.google.com/maps/api/js?key=AIzaSyDswlGJQRHEKcglQh8jEzD0k2kf0mCtzc0' );
     wp_enqueue_script( 'vendor-script', get_template_directory_uri().'/js/vendor.js', array( 'jquery' ));
     wp_enqueue_script( 'basic-script', get_template_directory_uri().'/js/script.js', array( 'jquery' ));
 }
@@ -28,6 +28,14 @@ function add_css(){
   wp_enqueue_style( 'vendor-style', get_template_directory_uri().'/css/vendor.css', array());
   wp_enqueue_style( 'basic-style', get_template_directory_uri().'/css/style.css', array());
 }
+
+function my_acf_google_map_api( $api ){
+  $api['key'] = 'AIzaSyDswlGJQRHEKcglQh8jEzD0k2kf0mCtzc0';
+  return $api;
+}
+
+add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
+
 
 //抜粋の文字数を制御
 function custom_excerpt_length( $length ) {
@@ -47,7 +55,7 @@ function create_post_type() {
       ),
       'has_archive' => true,
       'public' => true,
-      'menu_position' =>10
+      'menu_position' =>5
     )
   );
 
@@ -78,6 +86,8 @@ register_taxonomy(
     'rewrite' => array( 'slug' => 'shop/genre' ),
   )
 );
+
+
 
 //カスタムタクソノミー、タグタイプ
 register_taxonomy(

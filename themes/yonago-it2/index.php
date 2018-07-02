@@ -63,14 +63,16 @@
         </div>
         <div class="block-shop-content">
           <ul class="list-shop-tags">
-            <?php foreach ($terms_tag as $val): ?>
-              <li><span class="fa fa-tag"></span><?php echo $val->name ?></li>
-            <?php endforeach ?>
+            <?php 
+            $terms_tag = get_the_terms( $post->ID, 'shop-tag');
+             ?>
+            <?php if ($terms_tag): ?>
+              <?php foreach ($terms_tag as $val): ?>
+                <li><span class="fa fa-tag"></span><?php echo $val->name ?></li>
+              <?php endforeach ?>
+            <?php endif ?>
           </ul>
           <h3 class="title title-shop-name"><?php echo $title ?></h3>
-          <?php 
-          $terms_tag = get_the_terms( $post->ID, 'shop-tag');
-           ?>
           <div class="block-shop-footer"><span class="text-primary">詳しく見る</span></div>
         </div>
       </a>
@@ -85,7 +87,8 @@
     <div class="rows">
       <div class="cols col-12">
         <div class="block-header">
-          <h2 class="title title-block-header">スペシャル特集</h2><span class="title-block-header-sub">SPECIAL FEATURE</span>
+          <h2 class="title title-block-header">スペシャル特集</h2>
+          <span class="title-block-header-sub">SPECIAL FEATURE</span>
         </div>
       </div>
     </div>
