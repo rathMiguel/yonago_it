@@ -22,6 +22,10 @@ category: Layout
   padding-left: $gutter;
   padding-right: $gutter;
   box-sizing: border-box;
+  @include media(sm){
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 

@@ -9,18 +9,13 @@
   .item-block-news{
     border-bottom: 1px solid #DDD;
     position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    .block-news-photo{
-      width: initial;
-      max-width: 100%;
-    }
     .block-news-content{
-      max-width: 60%;
       padding: 0;
       margin-left: 10px;
-      p.date{
+      @include media(mdu){
+        padding-left: 280px;
+      }
+      .date{
         font-size: 12px;
         margin-bottom: 5px;
       }

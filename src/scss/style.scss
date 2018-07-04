@@ -53,8 +53,10 @@
 @import "theme/top";
 @import "theme/page";
 @import "theme/single";
-@import "theme/news";
 @import "theme/shop";
+.page-template-page-news{
+  @import "theme/news";
+}
 @import "theme/styleguide";
 
 // Helper

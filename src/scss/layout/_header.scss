@@ -35,7 +35,7 @@ header#header{
       width: 40px;
       padding-top: 10px;
       float: left;
-      margin-left: -20px;
+      margin-left: -10px;
     }
   }
 
@@ -148,7 +148,7 @@ header#header{
   }
   @include media(sm){
     position: fixed;
-    right: 10px;
+    right: 0px;
     top: 18px;
     width: 44px;
     height: 44px;

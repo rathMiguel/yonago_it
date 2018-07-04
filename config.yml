@@ -68,6 +68,7 @@ common:
 # トップページ
 top:
   id:          'top'
+  className:   'home blog'
   title:       'I＋[イット] 公式ウェブサイト - 鳥取県米子市周辺の地域情報'
   depth:       '/'
   dirName:     ''
@@ -79,6 +80,7 @@ top:
 # 下層ページ（以降、pageは各ページに適宜つける）
 page:
   id:          'page'
+  className:   'page'
   title:       'I＋[イット] 公式ウェブサイト - 固定ページ'
   depth:       '/'
   dirName:     ''
@@ -89,6 +91,7 @@ page:
 
 shop:
   id:          'page'
+  className:   'page'
   title:       'トップページタイトル名'
   depth:       '/'
   dirName:     ''
@@ -99,6 +102,7 @@ shop:
 
 shopSingle:
   id:          'page'
+  className:   'page'
   title:       'トップページタイトル名'
   depth:       '/'
   dirName:     ''
@@ -109,6 +113,7 @@ shopSingle:
 
 single:
   id:          'page'
+  className:   'page'
   title:       'トップページタイトル名'
   depth:       '/'
   dirName:     ''
@@ -119,6 +124,7 @@ single:
 
 news:
   id:          'page'
+  className:   'page-template page-template-page-news page-template-page-news-php page page-id-4527'
   title:       'トップページタイトル名'
   depth:       '/'
   dirName:     ''

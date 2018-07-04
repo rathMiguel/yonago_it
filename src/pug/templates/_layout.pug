@@ -11,7 +11,7 @@ html(lang=common.lang)
 		include head/_css
 		block title
 			title=label.title
-	body(id=label.id, class="page-" + label.id)
+	body(id=label.id, class=label.className)
 		block header
 			include modules/_header
 		main(role="main")
