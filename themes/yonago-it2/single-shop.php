@@ -50,6 +50,7 @@
             <td><?php echo $info_map['address'] ?></td>
           </tr>
           <?php endif ?>
+          <?php acf_table('info_tel'); ?>
           <?php acf_table('info_worktime'); ?>
           <?php acf_table('info_shisatsu'); ?>
           <?php acf_table('info_kyushin'); ?>
