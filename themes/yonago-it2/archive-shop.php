@@ -55,6 +55,10 @@
           ?>
         </div>
         <div class="block-shop-content">
+          <?php 
+          $terms_tag = get_the_terms( $post->ID, 'shop-tag');
+           ?>
+          <h3 class="title title-shop-name"><?php echo $title ?></h3>
           <ul class="list-shop-tags">
             <?php if ($terms_tag): ?>
               <?php foreach ($terms_tag as $val): ?>
@@ -62,10 +66,6 @@
               <?php endforeach ?>
             <?php endif ?>
           </ul>
-          <h3 class="title title-shop-name"><?php echo $title ?></h3>
-          <?php 
-          $terms_tag = get_the_terms( $post->ID, 'shop-tag');
-           ?>
           <div class="block-shop-footer"><span class="text-primary">詳しく見る</span></div>
         </div>
       </a>

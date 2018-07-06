@@ -162,7 +162,8 @@
     display: inline-block;
     background-color: #FF7573;
     color: #FFF;
-    padding: 3px 10px;
+    padding: 2px 10px;
+    font-size: 13px;
     @include media(sm){
       font-size: 10px;
     }
@@ -174,11 +175,13 @@
   }
   
   .list-shop-tags{
+    margin-bottom: 1em;
     li{
       display: inline-block;
       margin-right: 1em;
+      line-height: 1.5;
       @include media(mdu){
-        font-size: 14px;
+        font-size: 12px;
       }
       @include media(sm){
         font-size: 11px;
