@@ -54,7 +54,8 @@
 @import "theme/page";
 @import "theme/single";
 @import "theme/shop";
-.page-template-page-news{
+.page-template-page-news,
+.post-type-archive-feature{
   @import "theme/news";
 }
 @import "theme/styleguide";
