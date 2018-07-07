@@ -38,10 +38,10 @@ $ ->
 
   # instagramの表示
   feed = new Instafeed({
-      clientId: 'c0fe0315af8346e79114e997e5808493',
+      clientId: '8ef65f0b87704ca0ad94ad89fcf4067f',
       get: 'user', 
       userId: '4683078494',
-      accessToken:'4683078494.M2E4MWE5Zg==.MWJlYWJiYTE4ZTZh.NGM1ZmEyNzM5MWQ0MDZhYTdkNTk=',
+      accessToken:'4683078494.8ef65f0.37254e31fa3f414ab6696f3d48d3b6a7',
       links: true,
       limit: 12,
       resolution:'standard_resolution',
