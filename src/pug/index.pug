@@ -12,6 +12,27 @@ block content
       .rows
         .cols.col-12
           .block-header
+            h2.title.title-block-header スペシャル特集
+            span.title-block-header-sub SPECIAL FEATURE
+      .rows
+        .cols.col-12.text-center
+          p.caption-block-top イット編集部が厳選したとっておきのイベントを特集しました
+      .rows
+        .cols.col-12.pdx-0-sm
+          .block-feature-list
+            // ループ:スペシャル特集
+            - var i = 1;
+            while i <= 6
+              a(href="single.html").item-block.item-block-feature
+                .block-feature-photo
+                  img(src="https://placehold.jp/800x300.png", alt="")
+              - i++;
+            // /ループ:スペシャル特集
+  .block-common.block-top
+    .wrapper
+      .rows
+        .cols.col-12
+          .block-header
             h2.title.title-block-header 掲載店舗情報
             span.title-block-header-sub STORES
       .rows
@@ -44,27 +65,6 @@ block content
         // /ループ:店舗リスト
       .block-footer
         a(href="archive-shop.html").button.button-rounded.button-medium.button-primary もっと見る
-  .block-common.block-top
-    .wrapper
-      .rows
-        .cols.col-12
-          .block-header
-            h2.title.title-block-header スペシャル特集
-            span.title-block-header-sub SPECIAL FEATURE
-      .rows
-        .cols.col-12.text-center
-          p.caption-block-top イット編集部が厳選したとっておきのイベントを特集しました
-      .rows
-        .cols.col-12.pdx-0-sm
-          .block-feature-list
-            // ループ:スペシャル特集
-            - var i = 1;
-            while i <= 6
-              a(href="single.html").item-block.item-block-feature
-                .block-feature-photo
-                  img(src="https://placehold.jp/260x170.png", alt="")
-              - i++;
-            // /ループ:スペシャル特集
   .block-common.block-top
     .wrapper
       .rows

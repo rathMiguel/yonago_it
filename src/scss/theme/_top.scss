@@ -99,8 +99,6 @@
   }
 }
 
-
-
 .area-shoplist-main{
   overflow: hidden;
 }
@@ -218,22 +216,25 @@
 }
 
 .item-block-feature{
-  margin: 5px;
   display: block;
   box-sizing: border-box;
+  padding: 5px;
   
   @include media(sm){
     @include grid-content(50%, 2, 0, 0);
     margin-right: 0;
-    padding-right: 1px;
-    padding-left: 1px;
-    margin-bottom: 2px;
+    padding: 1px;
+    width: 100%;
+  }
+  @include media(mdu){
+    width: 50%;
   }
 }
 
+
 .block-feature-photo{
-  @include media(mdu){
-    width: 400px;
+  img{
+    vertical-align: bottom;
   }
 }
 
