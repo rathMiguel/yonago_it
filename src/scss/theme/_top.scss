@@ -69,14 +69,14 @@
     button{
       height: auto;
       width: auto;
-      background-color: rgba(#fff, 0.75);
+      background-color: rgba(#DDD, 0.75);
       text-indent: -9999px;
       border-radius: 50px;
     }
     
     .slick-active{
       button{
-        background-color: rgba(#666, 1);
+        background-color: rgba(#555, 1);
       }
     }
   }
