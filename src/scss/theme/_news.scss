@@ -13,7 +13,9 @@
     padding-right: 10px;
   }
   .block-news-photo{
-    
+    @include media(mdu){
+      width: 260px;
+    }
   }
   .block-news-content{
     padding: 0;
