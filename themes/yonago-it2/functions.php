@@ -13,7 +13,7 @@ add_theme_support('post-thumbnails');
 add_image_size( 'medium-image', 600, 400, true );
 add_image_size( 'main-image', 935, 935 );
 add_image_size( 'top-image', 260, 170, true );
-add_image_size( 'banner-image', 600, 300, true );
+add_image_size( 'banner-image', 800, 300, true );
 
 // CSS/JSの追加
 add_action('wp_enqueue_scripts','add_addJs');
