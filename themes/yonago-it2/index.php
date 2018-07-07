@@ -14,6 +14,56 @@
     <div class="rows">
       <div class="cols col-12">
         <div class="block-header">
+          <h2 class="title title-block-header">スペシャル特集</h2>
+          <span class="title-block-header-sub">SPECIAL FEATURE</span>
+        </div>
+      </div>
+    </div>
+    <div class="rows">
+      <div class="cols col-12 text-center">
+        <p class="caption-block-top">イット編集部が厳選したとっておきのイベントを特集しました</p>
+      </div>
+    </div>
+    <div class="rows">
+      <div class="cols col-12 pdx-0-sm">
+        <div class="block-feature-list">
+          <!-- ループ:スペシャル特集-->
+          <?php
+            $args = array(
+              'post_type' => 'feature',
+              );
+              $the_query = new WP_Query( $args );
+              if($the_query->have_posts()):
+          ?>
+          <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+          <?php 
+            $title = get_the_title();
+            $link = get_the_permalink();
+            $date = get_the_date();
+           ?>
+          <a class="item-block item-block-feature" href="<?php echo $link ?>">
+            <div class="block-feature-photo">
+              <?php 
+              if (has_post_thumbnail()) {
+                  the_post_thumbnail('banner-image',array( 'alt' => $title, 'title' => $title));
+              }else{
+                  echo '<img src="'.get_template_directory_uri().'/images/common/pending800x300.png" alt="'. $title .'">';
+              }
+              ?>
+            </div>
+          </a>
+          <?php endwhile; endif; ?>
+          <!-- /ループ:スペシャル特集-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="block-common block-top">
+  <div class="wrapper">
+    <div class="rows">
+      <div class="cols col-12">
+        <div class="block-header">
           <h2 class="title title-block-header">掲載店舗情報</h2><span class="title-block-header-sub">STORES</span>
         </div>
       </div>
@@ -79,57 +129,7 @@
       <?php endwhile; endif; ?>
       <!-- /ループ:店舗リスト-->
     </div>
-    <div class="block-footer"><a class="button button-rounded button-medium button-primary" href="archive-shop.html">もっと見る</a></div>
-  </div>
-</div>
-<div class="block-common block-top">
-  <div class="wrapper">
-    <div class="rows">
-      <div class="cols col-12">
-        <div class="block-header">
-          <h2 class="title title-block-header">スペシャル特集</h2>
-          <span class="title-block-header-sub">SPECIAL FEATURE</span>
-        </div>
-      </div>
-    </div>
-    <div class="rows">
-      <div class="cols col-12 text-center">
-        <p class="caption-block-top">イット編集部が厳選したとっておきのイベントを特集しました</p>
-      </div>
-    </div>
-    <div class="rows">
-      <div class="cols col-12 pdx-0-sm">
-        <div class="block-feature-list">
-          <!-- ループ:スペシャル特集-->
-          <?php
-            $args = array(
-              'post_type' => 'feature',
-              );
-              $the_query = new WP_Query( $args );
-              if($the_query->have_posts()):
-          ?>
-          <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-          <?php 
-            $title = get_the_title();
-            $link = get_the_permalink();
-            $date = get_the_date();
-           ?>
-          <a class="item-block item-block-feature" href="<?php echo $link ?>">
-            <div class="block-feature-photo">
-              <?php 
-              if (has_post_thumbnail()) {
-                  the_post_thumbnail('banner-image',array( 'alt' => $title, 'title' => $title));
-              }else{
-                  echo '<img src="'.get_template_directory_uri().'/images/common/pending800x300.png" alt="'. $title .'">';
-              }
-              ?>
-            </div>
-          </a>
-          <?php endwhile; endif; ?>
-          <!-- /ループ:スペシャル特集-->
-        </div>
-      </div>
-    </div>
+    <div class="block-footer"><a class="button button-rounded button-medium button-primary" href="/shop/">もっと見る</a></div>
   </div>
 </div>
 <div class="block-common block-top">

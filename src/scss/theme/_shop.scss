@@ -1,51 +1,65 @@
 @charset "utf-8";
 
-//共通scss
-//見出し余白
-  .title-margin{
-   margin: 100px 0;
-  }
- //見出し余白 END
-//フィルター
-  .block-filter{
-    margin: 0 auto;
-    button{
-      font-weight: 700;
-      width: 100%;
-    }
+.title-margin{
+ margin: 100px 0;
+}
 
-    .list-filter{
-      display: flex;
-      justify-content: left;
-      flex-wrap: nowrap;
-      margin: -5px;
-      @include media(md){
-        flex-wrap: wrap;
-      }
+.block-filter-header{
+  padding-left: 10px;
+  padding-right: 10px;
+  @include media(mdu){
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.block-filter{
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  @include media(mdu){
+    margin-bottom: 20px;
+  }
+  button{
+    font-weight: 700;
+    width: 100%;
+  }
+
+  .list-filter{
+    display: flex;
+    justify-content: left;
+    flex-wrap: nowrap;
+    margin: -5px;
+    @include media(md){
+      flex-wrap: wrap;
+    }
+    @include media(sm){
+      flex-wrap: wrap;
+      margin: -3px;
+    }
+    li{
+      width: 100%;
+      box-sizing: border-box;
+      padding: 3px;
       @include media(sm){
-        flex-wrap: wrap;
-        margin: -3px;
+        width: 50%;
       }
-      li{
-        width: 100%;
-        box-sizing: border-box;
-        padding: 3px;
-        @include media(sm){
-          width: 50%;
-        }
-        @include media(mdu){
-          width: 250px;
-          padding: 5px;
-        }
+      @include media(mdu){
+        width: 250px;
+        padding: 5px;
       }
     }
   }
+}
 //フィルター END
 //店舗一覧
+.post-type-archive-shop{
   .block-shop-list{
     flex-wrap: wrap;
-    margin-top: 5%;
   }
+}
+
 //店舗一覧 END
 //共通scss END
 
