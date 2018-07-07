@@ -303,6 +303,9 @@
   display: block;
   .block-news-photo{
     float: left;
+    @include media(mdu){
+      width: 140px;
+    }
     @include media(sm){
       width: 100px;
     }
