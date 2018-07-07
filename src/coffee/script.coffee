@@ -45,7 +45,7 @@ $ ->
       links: true,
       limit: 12,
       resolution:'standard_resolution',
-      template: '<li><a href="{{link}}"><img src={{image}} alt={{caption}}></a></li>'
+      template: '<li><a href="{{link}}" target="_blank"><img src={{image}} alt={{caption}}></a></li>'
   });
   feed.run();
 
