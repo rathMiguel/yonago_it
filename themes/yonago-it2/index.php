@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div class="block-common block-top block-slider">
   <ul class="js-slider-top slider-top">
-    <li><a href="/news/"><img src="https://it-magazine.info/wp-content/uploads/2018/07/staff_banner.jpg" alt=""></a></li>
+    <li><a href="/news/"><img src="https://it-magazine.info/wp-content/uploads/2018/07/staff_banner-1.jpg" alt=""></a></li>
     <li><a href="https://it-magazine.info/news/vol7it_open/"><img src="https://it-magazine.info/wp-content/uploads/2018/07/cover_banner.jpg" alt=""></a></li>
     <li><a href="https://it-magazine.info/2018daisen1300/" target="_blank"><img src="https://it-magazine.info/wp-content/uploads/2018/07/daisen_banner.jpg" alt=""></a></li>
   </ul>
