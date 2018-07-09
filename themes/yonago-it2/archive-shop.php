@@ -45,7 +45,7 @@
             if (has_post_thumbnail()) {
                 the_post_thumbnail('top-image',array( 'alt' => $title, 'title' => $title));
             }else{
-                echo '<img src="'.bloginfo('template_directory').'/images/pending260x170.png" alt="'. $title .'">';
+                echo '<img src="'.get_template_directory_uri().'/images/common/pending260x170.png" alt="'.$title.'">';
             }
             ?>
 
