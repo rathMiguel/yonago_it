@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <?php while ( have_posts() ) : the_post(); ?>
-  <?php 
+  <?php
     $title = get_the_title();
    ?>
 <div class="wrapper-single">
@@ -28,7 +28,7 @@
     <div class="cols col-4 col-12-sm">
       <div class="shop-infomation-content">
         <div class="shop-infomation-photo">
-          <?php 
+          <?php
             $subimage = get_field('subimage');
             $subimage_url = wp_get_attachment_image_src($subimage, 'medium');
            ?>
@@ -40,7 +40,7 @@
     </div>
     <div class="cols col-8 col-12-sm">
       <div class="shop-infomation-text">
-        <?php 
+        <?php
         $info_map = get_field('info_map');
          ?>
         <table class="table table-info">
@@ -51,6 +51,7 @@
           </tr>
           <?php endif ?>
           <?php acf_table('info_tel'); ?>
+          <?php acf_table('info_eigyou'); ?>
           <?php acf_table('info_worktime'); ?>
           <?php acf_table('info_shisatsu'); ?>
           <?php acf_table('info_kyushin'); ?>
