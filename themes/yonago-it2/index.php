@@ -109,17 +109,15 @@
           ?>
         </div>
         <div class="block-shop-content">
+          <h3 class="title title-shop-name"><?php echo $title ?></h3>
           <ul class="list-shop-tags">
-            <?php 
-            $terms_tag = get_the_terms( $post->ID, 'shop-tag');
-             ?>
+            <?php $terms_tag = get_the_terms( $post->ID, 'shop-tag'); ?>
             <?php if ($terms_tag): ?>
               <?php foreach ($terms_tag as $val): ?>
                 <li><span class="fa fa-tag"></span><?php echo $val->name ?></li>
               <?php endforeach ?>
             <?php endif ?>
           </ul>
-          <h3 class="title title-shop-name"><?php echo $title ?></h3>
           <div class="block-shop-footer"><span class="text-primary">詳しく見る</span></div>
         </div>
       </a>
