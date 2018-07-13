@@ -6,6 +6,15 @@
     <li><a href="https://it-magazine.info/2018daisen1300/" target="_blank"><img src="https://it-magazine.info/wp-content/uploads/2018/07/daisen_banner.jpg" alt=""></a></li>
   </ul>
 </div>
+<div class="area-top-main-before">
+  <div class="block-top-main-before">
+    <div class="wrapper">
+      <div class="rows">
+        <div class="cols col-12 text-right"><a href="" class="banner-haihu"><img src="http://it.test/wp-content/uploads/2018/07/banner_haihu.png" alt="" width="180"/></a></div>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="block-common block-top">
   <div class="wrapper">
     <div class="rows">

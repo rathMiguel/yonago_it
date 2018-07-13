@@ -84,6 +84,50 @@
 }
 
 //
+// main before
+//
+
+@keyframes fuwafuwa {
+  0, 100% {
+    transform: rotate(5deg) translateY(0px);
+  }
+
+  50% {
+    transform: rotate(-5deg) translateY(0px);
+  }
+}
+
+.area-top-main-before{
+  position: relative;
+  .block-top-main-before{
+    position: absolute;
+    top: -320px;
+    z-index: 1000;
+    width: 100%;
+    @include media(sm){
+      top: -125px;
+    }
+  }
+
+  .rows{
+    padding-right: 0px;
+    @include media(mdu){
+      padding-right: 30px;
+    }
+  }
+
+  .banner-haihu{
+    display: inline-block;
+    animation: fuwafuwa 3s ease-in-out infinite;
+    @include media(sm){
+      margin-left: auto;
+      margin-right: -10px;
+      width: 65px;
+    }
+  }
+}
+
+//
 // shop list
 //
 

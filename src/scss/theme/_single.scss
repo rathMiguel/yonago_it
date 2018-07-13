@@ -250,12 +250,14 @@ $pjmargin-top2: 0px;
 //シェア END
 //関連
   .block-relation{
-    margin-top: $pjmargin-top1;
+    margin-top: 50px;
+    border-top: solid 1px #AAA;
+    
     .relation-link{
       height: 150px;
       display: flex;
       justify-content: space-between;
-      border-bottom: solid 1px #222;
+      border-bottom: solid 1px #AAA;
       a{
         text-decoration: none;
         color: #222;
@@ -265,12 +267,13 @@ $pjmargin-top2: 0px;
       }
     }
     .next-page{
+      margin-right: auto;
       width: 50%;
       text-align: right;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-right: solid 1px #222;
+      border-right: solid 1px #AAA;
       padding: 0 20px 0 5px;
       position: relative;
       p.sub{
@@ -280,7 +283,9 @@ $pjmargin-top2: 0px;
         font-size: 10px;
       }
     }
+    
     .back-page{
+      margin-left: auto;
       width: 50%;
       text-align: left;
       display: flex;

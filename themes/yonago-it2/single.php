@@ -25,6 +25,42 @@
       </div>
     </div>
   </div>
+
+  <?php 
+
+  $post_type = get_post_type();
+
+  // 前ページ / 次ページの情報を取得
+  $prevpost = mod_get_adjacent_post('prev', array($post_type));
+  $nextpost = mod_get_adjacent_post('next', array($post_type));
+
+  //前の記事、次の記事いずれか存在しているとき
+  if( $prevpost or $nextpost ): 
+   ?>
+  <div class="block-relation">
+    <div class="relation-link">
+      <?php if ($prevpost): ?>
+        <a class="next-page" href="<?php the_permalink($prevpost->ID) ?>">
+          <div class="block-next-page"><i class="fa fa-angle-left fa-3x"></i></div>
+          <div class="block-next-page2">
+            <p class="sub">前のページ</p>
+            <p><?php echo $prevpost->post_title; ?></p>
+          </div>
+        </a>
+      <?php endif ?>
+      <?php if ($nextpost): ?>
+      <a class="back-page" href="<?php the_permalink($nextpost->ID) ?>">
+        <div class="block-back-page">
+          <p class="sub">次のページ</p>
+          <p><?php echo $nextpost->post_title; ?></p>
+        </div>
+        <div class="block-back-page2"><i class="fa fa-angle-right fa-3x"></i></div>
+      </a>
+      <?php endif ?>
+    </div>
+  </div>
+
+  <?php endif; ?>
 </div>
 <?php endwhile; ?>
 <?php get_footer(); ?>

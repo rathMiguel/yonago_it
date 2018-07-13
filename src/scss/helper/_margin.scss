@@ -2,14 +2,14 @@
 
 // 余白
 
-@for $i from 0 through 5 {
+@for $i from 0 through 10 {
   .mg-#{$i} { margin:#{$i}em; }
   .pd-#{$i} { padding:#{$i}em; }
 }
 
 @each $media in $style-media{
   @include media($media){
-    @for $i from 0 through 5 {
+    @for $i from 0 through 10 {
       .mg-#{$i}-#{$media} { margin:#{$i}em; }
       .pd-#{$i}-#{$media} { padding:#{$i}em; }
     }
@@ -18,7 +18,7 @@
 
 // 上下または左右の余白
 
-@for $i from 1 through 5 {
+@for $i from 1 through 10 {
   .mgx-#{$i} {
     margin-left:#{$i}em;
     margin-right:#{$i}em;
@@ -39,7 +39,7 @@
 
 @each $media in $style-media{
   @include media($media){
-    @for $i from 0 through 5 {
+    @for $i from 0 through 10 {
       .mgx-#{$i}-#{$media} {
         margin-left:#{$i}em;
         margin-right:#{$i}em;
@@ -73,7 +73,7 @@
 
 @each $media in $style-media{
   @include media($media){
-    @for $i from 0 through 5 {
+    @for $i from 0 through 10 {
       .mgt-03-#{$media}{ margin-top: 0.3em; }
       .mgt-05-#{$media}{ margin-top: 0.5em; }
       .mgb-03-#{$media}{ margin-bottom: 0.3em; }
@@ -88,7 +88,7 @@
 
 // 上下左右の余白
 
-@for $i from 0 through 7 {
+@for $i from 0 through 10 {
   .mgt-#{$i} { margin-top:#{$i}em; }
   .mgr-#{$i} { margin-right:#{$i}em; }
   .mgb-#{$i} { margin-bottom:#{$i}em; }
@@ -101,7 +101,7 @@
 
 @each $media in $style-media{
   @include media($media){
-    @for $i from 0 through 7 {
+    @for $i from 0 through 10 {
       .mgt-#{$i}-#{$media} { margin-top:#{$i}em; }
       .mgr-#{$i}-#{$media} { margin-right:#{$i}em; }
       .mgb-#{$i}-#{$media} { margin-bottom:#{$i}em; }

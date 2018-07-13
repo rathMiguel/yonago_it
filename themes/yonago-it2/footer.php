@@ -1,4 +1,17 @@
 </main>
+<div class="wrapper mgt-6 mgt-3-sm">
+  <div class="rows">
+    <div class="cols col-12">
+      <div class="widget-footer">
+        <div class="widget-block widget-block-footer">
+          <div class="text-center">
+            <a href="/present/"><img src="http://it.test/wp-content/uploads/2018/07/banner_it.jpg" alt="アンケートに答えてプレゼントをもらおう！"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <footer id="footer">
   <nav class="nav-footer-sub">
     <div class="wrapper">
@@ -19,7 +32,6 @@
             <div class="footer-about-logo"><span class="logo-footer"><a href="/"><img src="<?php bloginfo('template_directory'); ?>/images/common/logo_white.svg" alt="私とマチのネットワーク I＋[イット]" width="89"></a></span><span class="logo-footer-caption">I＋[イット]とは</span></div>
             <div class="footer-about-content">
               <p>I+[イット]はWebデザイナー養成スクール、デジタルハリウッドSTUDIO米子の受講生＆卒業生達で創っているフリーペーパーです。</p>
-              <p>デジハリで学んだスキルを活用し、「デジタル×アナログの新しいカタチ」をコンセプトに学びながら情報発信するフリーマガジン＆Webサイトです。</p>
               <div class="footer-about-bottom">
                 <p><a class="link link-primary" href="/about/">詳しく見る</a></p>
               </div>
