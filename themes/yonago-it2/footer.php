@@ -5,7 +5,7 @@
       <div class="widget-footer">
         <div class="widget-block widget-block-footer">
           <div class="text-center">
-            <a href="/present/"><img src="http://it.test/wp-content/uploads/2018/07/banner_it.jpg" alt="アンケートに答えてプレゼントをもらおう！"></a>
+            <a href="/present/"><img src="https://it-magazine.info/wp-content/uploads/2018/07/banner_it.jpg" alt="アンケートに答えてプレゼントをもらおう！"></a>
           </div>
         </div>
       </div>
