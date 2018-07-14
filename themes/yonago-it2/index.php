@@ -10,7 +10,7 @@
   <div class="block-top-main-before">
     <div class="wrapper">
       <div class="rows">
-        <div class="cols col-12 text-right"><a href="" class="banner-haihu"><img src="https://it-magazine.info/wp-content/uploads/2018/07/banner_haihu.png" alt="" width="180"/></a></div>
+        <div class="cols col-12 text-right"><a href="/pdf/it-vol7.pdf" class="banner-haihu"><img src="https://it-magazine.info/wp-content/uploads/2018/07/banner_haihu.png" alt="" width="180"/></a></div>
       </div>
     </div>
   </div>
