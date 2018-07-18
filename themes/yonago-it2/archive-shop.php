@@ -2,10 +2,10 @@
 
 <div class="wrapper">
   <div class="block-header">
-    <h2 class="title title-block-header title-margin">掲載店舗一覧</h2>
+    <h2 class="title title-block-header title-margin">おすすめのお店</h2>
   </div>
   <div class="block-filter-header">
-    <h4 class="title title-small">フィルターで絞り込み：</h4>
+    <h4 class="title title-small">地域で絞り込み：</h4>
   </div>
   <div class="block-filter">
     <ul class="list-filter">

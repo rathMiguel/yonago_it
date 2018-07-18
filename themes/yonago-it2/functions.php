@@ -50,8 +50,8 @@ function create_post_type() {
     array(
       'supports' => array('title','editor','tag','thumbnail','excerpt'),
       'labels' => array(
-        'name' => __( '掲載店舗一覧' ),
-        'singular_name' => __( '掲載店舗一覧' ),
+        'name' => __( 'おすすめのお店' ),
+        'singular_name' => __( 'おすすめのお店' ),
       ),
       'has_archive' => true,
       'public' => true,

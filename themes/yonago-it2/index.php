@@ -27,7 +27,7 @@
     </div>
     <div class="rows">
       <div class="cols col-12 text-center">
-        <p class="caption-block-top">イット編集部が厳選したとっておきのイベントを特集しました</p>
+        <p class="caption-block-top">とっておきのイベントを特集しました</p>
       </div>
     </div>
     <div class="rows">
@@ -70,13 +70,14 @@
     <div class="rows">
       <div class="cols col-12">
         <div class="block-header">
-          <h2 class="title title-block-header">掲載店舗情報</h2><span class="title-block-header-sub">STORES</span>
+          <h2 class="title title-block-header">おすすめのお店</h2>
+          <span class="title-block-header-sub">STORES</span>
         </div>
       </div>
     </div>
     <div class="rows">
       <div class="cols col-12 text-center">
-        <p class="caption-block-top">旬なお店をピックアップ！</p>
+        <p class="caption-block-top">イット厳選！旬なお店をピックアップ。</p>
       </div>
     </div>
   </div>
@@ -141,7 +142,8 @@
     <div class="rows">
       <div class="cols col-12">
         <div class="block-header">
-          <h2 class="title title-block-header">新着情報</h2><span class="title-block-header-sub">NEWS</span>
+          <h2 class="title title-block-header">新着情報</h2>
+          <span class="title-block-header-sub">NEWS</span>
         </div>
       </div>
     </div>
@@ -187,7 +189,7 @@
           <h3 class="title title-secondary">FACEBOOK</h3>
         </div>
         <div class="block-facebook-main js-height">
-          <p class="color-gray">旬な情報を定期的に発信中！</p>
+          <p class="color-gray">定期的に発信中！</p>
           <div class="text-center">
             <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffp.It.YCF%2F&amp;tabs=timeline&amp;width=500&amp;height=500&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId=362851420751625" width="500" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
           </div>
