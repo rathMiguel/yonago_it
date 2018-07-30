@@ -18,7 +18,7 @@ add_image_size( 'banner-image', 800, 300, true );
 // CSS/JSの追加
 add_action('wp_enqueue_scripts','add_addJs');
 function add_addJs() {
-    wp_enqueue_script( 'googlemap', '//maps.google.com/maps/api/js?key=AIzaSyDswlGJQRHEKcglQh8jEzD0k2kf0mCtzc0' );
+    wp_enqueue_script( 'googlemap', '//maps.google.com/maps/api/js?key=AIzaSyAeGibWQZY2fBX8yYzZ7dNDtFuV7xnbCLQ' );
     wp_enqueue_script( 'vendor-script', get_template_directory_uri().'/js/vendor.js', array( 'jquery' ));
     wp_enqueue_script( 'basic-script', get_template_directory_uri().'/js/script.js', array( 'jquery' ));
 }
@@ -30,7 +30,7 @@ function add_css(){
 }
 
 function my_acf_google_map_api( $api ){
-  $api['key'] = 'AIzaSyDswlGJQRHEKcglQh8jEzD0k2kf0mCtzc0';
+  $api['key'] = 'AIzaSyAeGibWQZY2fBX8yYzZ7dNDtFuV7xnbCLQ';
   return $api;
 }
 
