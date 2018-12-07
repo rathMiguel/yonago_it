@@ -8,8 +8,8 @@ $ ->
     centerMode: true
     slidesToShow: 1
     variableWidth: true
-    speed: 1200
-    autoplaySpeed: 5000
+    speed: 800
+    autoplaySpeed: 2500
     initialSlide: 1
     cssEase: 'ease-in-out'
     responsive: [
